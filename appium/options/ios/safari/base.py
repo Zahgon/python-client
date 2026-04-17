@@ -43,3 +43,4 @@ class SafariOptions(
     UseSimulatorOption,
     WebkitWebrtcOption,
 ):
+    pass

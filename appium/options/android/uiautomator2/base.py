@@ -213,3 +213,4 @@ class UiAutomator2Options(
     DisableSuppressAccessibilityServiceOption,
     UserProfileOption,
 ):
+    pass

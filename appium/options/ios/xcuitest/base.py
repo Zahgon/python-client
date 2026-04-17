@@ -219,3 +219,4 @@ class XCUITestOptions(
     WebviewConnectRetriesOption,
     WebviewConnectTimeoutOption,
 ):
+    pass

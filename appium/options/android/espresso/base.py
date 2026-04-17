@@ -213,3 +213,4 @@ class EspressoOptions(
     ActivityOptionsOption,
     AppLocaleOption,
 ):
+    pass

@@ -32,3 +32,4 @@ class FlutterOptions(
     FlutterServerLaunchTimeOutOption,
     FlutterSystemPortOption,
 ):
+    pass
