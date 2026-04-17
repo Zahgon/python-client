@@ -29,8 +29,7 @@ class WdaLaunchTimeoutOption(SupportsCapabilities):
         """
         Maximum timeout to wait until WDA is listening.
         """
-        value = self.get_capability(WDA_LAUNCH_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @wda_launch_timeout.setter
     def wda_launch_timeout(self, value: Union[timedelta, int]) -> None:
@@ -38,4 +37,4 @@ class WdaLaunchTimeoutOption(SupportsCapabilities):
         Timeout to wait for WebDriverAgent to be pingable,
         after its building is finished. Defaults to 60000ms.
         """
-        self.set_capability(WDA_LAUNCH_TIMEOUT, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value)
+        pass

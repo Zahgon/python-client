@@ -29,7 +29,7 @@ class UseNewWdaOption(SupportsCapabilities):
         Whether whether to uninstall of any existing WebDriverAgent app
         on the device under test.
         """
-        return self.get_capability(USE_NEW_WDA)
+        pass
 
     @use_new_wda.setter
     def use_new_wda(self, value: bool) -> None:
@@ -48,4 +48,4 @@ class UseNewWdaOption(SupportsCapabilities):
         webDriverAgentUrl capability is not set. The negative/unset value of useNewWDA
         capability has no effect prior to xcuitest driver version 2.35.0.
         """
-        self.set_capability(USE_NEW_WDA, value)
+        pass

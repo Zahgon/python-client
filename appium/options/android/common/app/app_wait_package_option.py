@@ -28,7 +28,7 @@ class AppWaitPackageOption(SupportsCapabilities):
         """
         Identifier of the app package to wait for.
         """
-        return self.get_capability(APP_WAIT_PACKAGE)
+        pass
 
     @app_wait_package.setter
     def app_wait_package(self, value: str) -> None:
@@ -37,4 +37,4 @@ class AppWaitPackageOption(SupportsCapabilities):
         (not necessarily the main one).
         If not provided then defaults to appium:appPackage.
         """
-        self.set_capability(APP_WAIT_PACKAGE, value)
+        pass

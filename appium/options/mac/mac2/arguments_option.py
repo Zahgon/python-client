@@ -28,7 +28,7 @@ class ArgumentsOption(SupportsCapabilities):
         """
         Array of application command line arguments.
         """
-        return self.get_capability(ARGUMENTS)
+        pass
 
     @arguments.setter
     def arguments(self, value: List[str]) -> None:
@@ -36,4 +36,4 @@ class ArgumentsOption(SupportsCapabilities):
         Set the array of application command line arguments. This capability is
         only going to be applied if the application is not running on session startup.
         """
-        self.set_capability(ARGUMENTS, value)
+        pass

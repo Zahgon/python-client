@@ -28,7 +28,7 @@ class SafariOpenLinksInBackgroundOption(SupportsCapabilities):
         """
         Whether Safari should allow links to open in new windows.
         """
-        return self.get_capability(SAFARI_OPEN_LINKS_IN_BACKGROUND)
+        pass
 
     @safari_open_links_in_background.setter
     def safari_open_links_in_background(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class SafariOpenLinksInBackgroundOption(SupportsCapabilities):
         Whether Safari should allow links to open in new windows.
         Default keeps current sim setting.
         """
-        self.set_capability(SAFARI_OPEN_LINKS_IN_BACKGROUND, value)
+        pass

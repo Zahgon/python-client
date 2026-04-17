@@ -29,7 +29,7 @@ class MjpegServerPortOption(SupportsCapabilities):
         Port number on which WDA broadcasts screenshots stream encoded into MJPEG
         format from the device under test.
         """
-        return self.get_capability(MJPEG_SERVER_PORT)
+        pass
 
     @mjpeg_server_port.setter
     def mjpeg_server_port(self, value: int) -> None:
@@ -39,4 +39,4 @@ class MjpegServerPortOption(SupportsCapabilities):
         if the default port is busy because of other tests running in parallel.
         Default value: 9100.
         """
-        self.set_capability(MJPEG_SERVER_PORT, value)
+        pass

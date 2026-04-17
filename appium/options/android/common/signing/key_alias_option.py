@@ -28,7 +28,7 @@ class KeyAliasOption(SupportsCapabilities):
         """
         Keystore key alias.
         """
-        return self.get_capability(KEY_ALIAS)
+        pass
 
     @key_alias.setter
     def key_alias(self, value: str) -> None:
@@ -37,4 +37,4 @@ class KeyAliasOption(SupportsCapabilities):
         This option is used in combination with useKeystore, keystorePath,
         keystorePassword, keyAlias and keyPassword options. Unset by default
         """
-        self.set_capability(KEY_ALIAS, value)
+        pass

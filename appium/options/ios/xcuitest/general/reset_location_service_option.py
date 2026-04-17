@@ -28,7 +28,7 @@ class ResetLocationServiceOption(SupportsCapabilities):
         """
         Whether to reset the location service in the session deletion on real devices.
         """
-        return self.get_capability(RESET_LOCATION_SERVICE)
+        pass
 
     @reset_location_service.setter
     def reset_location_service(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class ResetLocationServiceOption(SupportsCapabilities):
         Whether reset the location service in the session deletion on real devices.
         Defaults to false.
         """
-        self.set_capability(RESET_LOCATION_SERVICE, value)
+        pass

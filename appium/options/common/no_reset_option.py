@@ -28,11 +28,11 @@ class NoResetOption(SupportsCapabilities):
         """
         Whether the driver should not perform a reset.
         """
-        return self.get_capability(NO_RESET)
+        pass
 
     @no_reset.setter
     def no_reset(self, value: bool) -> None:
         """
         Set whether the driver should not perform a reset.
         """
-        self.set_capability(NO_RESET, value)
+        pass

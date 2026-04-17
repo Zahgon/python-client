@@ -28,7 +28,7 @@ class SafariIgnoreFraudWarningOption(SupportsCapabilities):
         """
         Whether to prevent Safari from showing a fraudulent website warning.
         """
-        return self.get_capability(SAFARI_IGNORE_FRAUD_WARNING)
+        pass
 
     @safari_ignore_fraud_warning.setter
     def safari_ignore_fraud_warning(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class SafariIgnoreFraudWarningOption(SupportsCapabilities):
         Prevent Safari from showing a fraudulent website warning.
         Default keeps current sim setting..
         """
-        self.set_capability(SAFARI_IGNORE_FRAUD_WARNING, value)
+        pass

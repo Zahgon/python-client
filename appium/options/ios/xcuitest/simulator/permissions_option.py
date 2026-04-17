@@ -29,8 +29,7 @@ class PermissionsOption(SupportsCapabilities):
         """
         Get Simulator permissions.
         """
-        value = self.get_capability(PERMISSIONS)
-        return None if value is None else json.loads(value)
+        pass
 
     @permissions.setter
     def permissions(self, value: Dict[str, Dict[str, str]]) -> None:
@@ -47,4 +46,4 @@ class PermissionsOption(SupportsCapabilities):
         and statuses can be found at https://github.com/wix/AppleSimulatorUtils.
         For example: {"com.apple.mobilecal": {"calendar": "YES"}}
         """
-        self.set_capability(PERMISSIONS, json.dumps(value, ensure_ascii=False))
+        pass

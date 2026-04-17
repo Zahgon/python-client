@@ -29,8 +29,7 @@ class AvdLaunchTimeoutOption(SupportsCapabilities):
         """
         Timeout to wait until Android Emulator is started.
         """
-        value = self.get_capability(AVD_LAUNCH_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @avd_launch_timeout.setter
     def avd_launch_timeout(self, value: Union[timedelta, int]) -> None:
@@ -38,4 +37,4 @@ class AvdLaunchTimeoutOption(SupportsCapabilities):
         Maximum timeout to wait until Android Emulator is started.
         60000 ms by default.
         """
-        self.set_capability(AVD_LAUNCH_TIMEOUT, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value)
+        pass

@@ -28,7 +28,7 @@ class UnlockKeyOption(SupportsCapabilities):
         """
         Unlock key.
         """
-        return self.get_capability(UNLOCK_KEY)
+        pass
 
     @unlock_key.setter
     def unlock_key(self, value: str) -> None:
@@ -37,4 +37,4 @@ class UnlockKeyOption(SupportsCapabilities):
         Read [Unlock tutorial](https://github.com/appium/appium-android-driver/blob/master/docs/UNLOCK.md)
         for more details.
         """
-        self.set_capability(UNLOCK_KEY, value)
+        pass

@@ -28,7 +28,7 @@ class ScaleFactorOption(SupportsCapabilities):
         """
         Simulator scale factor.
         """
-        return self.get_capability(SCALE_FACTOR)
+        pass
 
     @scale_factor.setter
     def scale_factor(self, value: str) -> None:
@@ -41,4 +41,4 @@ class ScaleFactorOption(SupportsCapabilities):
         For simulators running Xcode SDK 9 and above the value could be any valid
         positive float number.
         """
-        self.set_capability(SCALE_FACTOR, value)
+        pass

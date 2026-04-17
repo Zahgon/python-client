@@ -28,7 +28,7 @@ class SkipAppKillOption(SupportsCapabilities):
         """
         Whether to skip the termination of the application under test.
         """
-        return self.get_capability(SKIP_APP_KILL)
+        pass
 
     @skip_app_kill.setter
     def skip_app_kill(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class SkipAppKillOption(SupportsCapabilities):
         when the testing session quits. false by default. This capability
         is only going to be applied if bundleId is set.
         """
-        self.set_capability(SKIP_APP_KILL, value)
+        pass

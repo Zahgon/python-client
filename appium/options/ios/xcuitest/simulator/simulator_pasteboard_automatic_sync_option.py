@@ -28,7 +28,7 @@ class SimulatorPasteboardAutomaticSyncOption(SupportsCapabilities):
         """
         Pasteboard automation sync state.
         """
-        return self.get_capability(SIMULATOR_PASTEBOARD_AUTOMATIC_SYNC)
+        pass
 
     @simulator_pasteboard_automatic_sync.setter
     def simulator_pasteboard_automatic_sync(self, value: bool) -> None:
@@ -39,4 +39,4 @@ class SimulatorPasteboardAutomaticSyncOption(SupportsCapabilities):
         not provide the flag to the launching command. on, off, or system is available.
         They are case-insensitive. Defaults to off.
         """
-        self.set_capability(SIMULATOR_PASTEBOARD_AUTOMATIC_SYNC, value)
+        pass

@@ -28,11 +28,11 @@ class BrowserNameOption(SupportsCapabilities):
         """
         The name of the browser to run the test on.
         """
-        return self.get_capability(BROWSER_NAME)
+        pass
 
     @browser_name.setter
     def browser_name(self, value: str) -> None:
         """
         Set the name of the browser to run the test on.
         """
-        self.set_capability(BROWSER_NAME, value)
+        pass

@@ -28,7 +28,7 @@ class AutoDismissAlertsOption(SupportsCapabilities):
         """
         Whether to dismiss all alerts automatically.
         """
-        return self.get_capability(AUTO_DISMISS_ALERTS)
+        pass
 
     @auto_dismiss_alerts.setter
     def auto_dismiss_alerts(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class AutoDismissAlertsOption(SupportsCapabilities):
         Dismiss all iOS alerts automatically if they pop up. This includes privacy
         access permission alerts (e.g., location, contacts, photos). Default is false.
         """
-        self.set_capability(AUTO_DISMISS_ALERTS, value)
+        pass

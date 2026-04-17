@@ -28,7 +28,7 @@ class ShowServerLogsOption(SupportsCapabilities):
         """
         Whether to show WDA server logs in the Appium log.
         """
-        return self.get_capability(SHOW_SERVER_LOGS)
+        pass
 
     @show_server_logs.setter
     def show_server_logs(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class ShowServerLogsOption(SupportsCapabilities):
         Set it to true in order to include xcodebuild output to the Appium
         server log. false by default.
         """
-        self.set_capability(SHOW_SERVER_LOGS, value)
+        pass

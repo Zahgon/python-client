@@ -29,7 +29,7 @@ class DisableWindowAnimationOption(SupportsCapabilities):
         Whether window animations when starting the instrumentation process
         are disabled.
         """
-        return self.get_capability(DISABLE_WINDOWS_ANIMATION)
+        pass
 
     @disable_window_animation.setter
     def disable_window_animation(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class DisableWindowAnimationOption(SupportsCapabilities):
         Set whether to disable window animations when starting the instrumentation process.
         false by default
         """
-        self.set_capability(DISABLE_WINDOWS_ANIMATION, value)
+        pass

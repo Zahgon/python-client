@@ -29,7 +29,7 @@ class WaitForQuiescenceOption(SupportsCapabilities):
         """
         Whether to wait for application quiescence.
         """
-        return self.get_capability(WAIT_FOR_QUIESCENCE)
+        pass
 
     @wait_for_quiescence.setter
     def wait_for_quiescence(self, value: Union[timedelta, float]) -> None:
@@ -39,4 +39,4 @@ class WaitForQuiescenceOption(SupportsCapabilities):
         of issues if you turn it off. Consider using waitForIdleTimeout capability
         instead for this purpose since Appium 1.20.0.
         """
-        self.set_capability(WAIT_FOR_QUIESCENCE, value)
+        pass

@@ -33,12 +33,7 @@ class Location(CanExecuteCommands, CanExecuteScripts):
         Returns:
             Union['WebDriver', 'Location']: Self instance
         """
-        try:
-            self.execute_script('mobile: toggleGps')
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            self.execute(Command.TOGGLE_LOCATION_SERVICES)
-        return self
+        pass
 
     def set_location(
         self,
@@ -60,20 +55,7 @@ class Location(CanExecuteCommands, CanExecuteScripts):
         Returns:
             Union['WebDriver', 'Location']: Self instance
         """
-        data = {
-            'location': {
-                'latitude': latitude,
-                'longitude': longitude,
-            }
-        }
-        if altitude is not None:
-            data['location']['altitude'] = altitude
-        if speed is not None:
-            data['location']['speed'] = speed
-        if satellites is not None:
-            data['location']['satellites'] = satellites
-        self.execute(Command.SET_LOCATION, data)
-        return self
+        pass
 
     @property
     def location(self) -> Dict[str, float]:
@@ -85,14 +67,8 @@ class Location(CanExecuteCommands, CanExecuteScripts):
                 - longitude (float)
                 - altitude (float)
         """
-        return self.execute(Command.GET_LOCATION)['value']
+        pass
 
     def _add_commands(self) -> None:
         """Add location endpoints. They are not int w3c spec."""
-        self.command_executor.add_command(
-            Command.TOGGLE_LOCATION_SERVICES,
-            'POST',
-            '/session/$sessionId/appium/device/toggle_location_services',
-        )
-        self.command_executor.add_command(Command.GET_LOCATION, 'GET', '/session/$sessionId/location')
-        self.command_executor.add_command(Command.SET_LOCATION, 'POST', '/session/$sessionId/location')
+        pass

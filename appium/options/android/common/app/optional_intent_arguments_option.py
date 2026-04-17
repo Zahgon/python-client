@@ -29,7 +29,7 @@ class OptionalIntentArgumentsOption(SupportsCapabilities):
         Intent arguments to be applied when
         starting the given appActivity by Activity Manager.
         """
-        return self.get_capability(OPTIONAL_INTENT_ARGUMENTS)
+        pass
 
     @optional_intent_arguments.setter
     def optional_intent_arguments(self, value: str) -> None:
@@ -37,4 +37,4 @@ class OptionalIntentArgumentsOption(SupportsCapabilities):
         Set optional intent arguments to be applied when
         starting the given appActivity by Activity Manager.
         """
-        self.set_capability(OPTIONAL_INTENT_ARGUMENTS, value)
+        pass

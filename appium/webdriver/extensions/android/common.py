@@ -28,32 +28,10 @@ class Common(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPresence
         Returns:
             Union['WebDriver', 'Common']: Self instance
         """
-        ext_name = 'mobile: openNotifications'
-        try:
-            self.assert_extension_exists(ext_name).execute_script(ext_name)
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            self.mark_extension_absence(ext_name).execute(Command.OPEN_NOTIFICATIONS, {})
-        return self
+        pass
 
     @property
     def current_package(self) -> str:
         """Retrieves the current package running on the device."""
-        ext_name = 'mobile: getCurrentPackage'
-        try:
-            return self.assert_extension_exists(ext_name).execute_script(ext_name)
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            return self.mark_extension_absence(ext_name).execute(Command.GET_CURRENT_PACKAGE)['value']
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(
-            Command.GET_CURRENT_PACKAGE,
-            'GET',
-            '/session/$sessionId/appium/device/current_package',
-        )
-        self.command_executor.add_command(
-            Command.OPEN_NOTIFICATIONS,
-            'POST',
-            '/session/$sessionId/appium/device/open_notifications',
-        )

@@ -28,7 +28,7 @@ class PlatformBuildVersionOption(SupportsCapabilities):
         """
         String representing the platform build version.
         """
-        return self.get_capability(PLATFORM_BUILD_VERSION)
+        pass
 
     @platform_build_version.setter
     def platform_build_version(self, value: str) -> None:
@@ -38,4 +38,4 @@ class PlatformBuildVersionOption(SupportsCapabilities):
         of a macOS build version is '18E193'. On macOS, the OS build version
         can be determined by running the sw_vers(1) utility.
         """
-        self.set_capability(PLATFORM_BUILD_VERSION, value)
+        pass

@@ -28,7 +28,7 @@ class ConnectHardwareKeyboardOption(SupportsCapabilities):
         """
         Whether to connect hardware keyboard to Simulator.
         """
-        return self.get_capability(CONNECT_HARDWARE_KEYBOARD)
+        pass
 
     @connect_hardware_keyboard.setter
     def connect_hardware_keyboard(self, value: bool) -> None:
@@ -40,4 +40,4 @@ class ConnectHardwareKeyboardOption(SupportsCapabilities):
         forceSimulatorSoftwareKeyboardPresence: false if no explicit value is set
         for forceSimulatorSoftwareKeyboardPresence capability since Appium 1.22.0.
         """
-        self.set_capability(CONNECT_HARDWARE_KEYBOARD, value)
+        pass

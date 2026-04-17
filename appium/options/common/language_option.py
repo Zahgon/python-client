@@ -28,11 +28,11 @@ class LanguageOption(SupportsCapabilities):
         """
         Language abbreviation to use in a test session.
         """
-        return self.get_capability(LANGUAGE)
+        pass
 
     @language.setter
     def language(self, value: str) -> None:
         """
         Set language abbreviation to use in a test session.
         """
-        self.set_capability(LANGUAGE, value)
+        pass

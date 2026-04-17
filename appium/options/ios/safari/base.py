@@ -43,9 +43,3 @@ class SafariOptions(
     UseSimulatorOption,
     WebkitWebrtcOption,
 ):
-    @property
-    def default_capabilities(self) -> Dict:
-        return {
-            PLATFORM_NAME: 'iOS',
-            AUTOMATION_NAME: 'Safari',
-        }

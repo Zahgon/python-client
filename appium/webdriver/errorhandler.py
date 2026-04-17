@@ -55,29 +55,6 @@ ERROR_TO_EXC_MAPPING: Dict[str, Type[sel_exceptions.WebDriverException]] = {
 }
 
 
-def format_stacktrace(original: Union[None, str, Sequence]) -> List[str]:
-    if not original:
-        return []
-    if isinstance(original, str):
-        return original.split('\n')
-
-    result: List[str] = []
-    try:
-        for frame in original:
-            if not isinstance(frame, dict):
-                continue
-
-            line = frame.get('lineNumber', '')
-            file = frame.get('fileName', '<anonymous>')
-            if line:
-                file = f'{file}:{line}'
-            meth = frame.get('methodName', '<anonymous>')
-            if 'className' in frame:
-                meth = f'{frame["className"]}.{meth}'
-            result.append(f'    at {meth} ({file})')
-    except TypeError:
-        pass
-    return result
 
 
 class MobileErrorHandler(errorhandler.ErrorHandler):
@@ -85,41 +62,4 @@ class MobileErrorHandler(errorhandler.ErrorHandler):
         """
         https://www.w3.org/TR/webdriver/#errors
         """
-        payload = response.get('value', '')
-        if isinstance(payload, dict):
-            payload_dict = payload
-        else:
-            try:
-                payload_dict = json.loads(payload)
-            except (json.JSONDecodeError, TypeError):
-                return
-            if not isinstance(payload_dict, dict):
-                return
-        value = payload_dict.get('value')
-        if not isinstance(value, dict):
-            return
-        error = value.get('error')
-        if not error:
-            return
-
-        message = value.get('message', error)
-        stacktrace = value.get('stacktrace', '')
-        # In theory, we should also be checking HTTP status codes.
-        # Java client, for example, prints a warning if the actual `error`
-        # value does not match to the response's HTTP status code.
-        exception_class: Type[sel_exceptions.WebDriverException] = ERROR_TO_EXC_MAPPING.get(
-            error, sel_exceptions.WebDriverException
-        )
-        if exception_class is sel_exceptions.WebDriverException and message:
-            if message == 'No such context found.':
-                exception_class = appium_exceptions.NoSuchContextException
-            elif message == 'That command could not be executed in the current context.':
-                exception_class = appium_exceptions.InvalidSwitchToTargetException
-
-        if exception_class is sel_exceptions.UnexpectedAlertPresentException:
-            raise sel_exceptions.UnexpectedAlertPresentException(
-                msg=message,
-                stacktrace=format_stacktrace(stacktrace),
-                alert_text=value.get('data'),
-            )
-        raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+        pass

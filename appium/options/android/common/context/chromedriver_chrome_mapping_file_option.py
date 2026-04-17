@@ -28,7 +28,7 @@ class ChromedriverChromeMappingFileOption(SupportsCapabilities):
         """
         Full path to the chromedrivers mapping file is located.
         """
-        return self.get_capability(CHROMEDRIVER_CHROME_MAPPING_FILE)
+        pass
 
     @chromedriver_chrome_mapping_file.setter
     def chromedriver_chrome_mapping_file(self, value: str) -> None:
@@ -40,4 +40,4 @@ class ChromedriverChromeMappingFileOption(SupportsCapabilities):
         chromedriver.md#automatic-discovery-of-compatible-chromedriver)
         article for more details.
         """
-        self.set_capability(CHROMEDRIVER_CHROME_MAPPING_FILE, value)
+        pass

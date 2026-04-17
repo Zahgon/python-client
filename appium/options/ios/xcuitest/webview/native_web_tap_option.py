@@ -28,7 +28,7 @@ class NativeWebTapOption(SupportsCapabilities):
         """
         Whether to enable native taps in web view mode.
         """
-        return self.get_capability(NATIVE_WEB_TAP)
+        pass
 
     @native_web_tap.setter
     def native_web_tap(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class NativeWebTapOption(SupportsCapabilities):
         to false. Warning: sometimes the preciseness of native taps could be broken,
         because there is no reliable way to map web element coordinates to native ones.
         """
-        self.set_capability(NATIVE_WEB_TAP, value)
+        pass

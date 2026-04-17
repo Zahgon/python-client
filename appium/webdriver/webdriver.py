@@ -165,11 +165,6 @@ class ExtensionBase:
     def __init__(self, execute: Callable[[str, Dict], Dict[str, Any]]):
         self._execute = execute
 
-    def execute(self, parameters: Union[Dict[str, Any], None] = None) -> Any:
-        param = {}
-        if parameters:
-            param = parameters
-        return self._execute(self.method_name(), param)
 
     def method_name(self) -> str:
         """
@@ -290,40 +285,11 @@ class WebDriver(
 
     def delete_extensions(self) -> None:
         """Delete extensions added in the class with 'setattr'"""
-        for extension in self._extensions:
-            instance = extension(self.execute)
-            method_name = instance.method_name()
-            if hasattr(WebDriver, method_name):
-                delattr(WebDriver, method_name)
+        pass
 
     def _update_command_executor(self, keep_alive: bool) -> None:
         """Update command executor following directConnect feature"""
-        direct_protocol = 'directConnectProtocol'
-        direct_host = 'directConnectHost'
-        direct_port = 'directConnectPort'
-        direct_path = 'directConnectPath'
-
-        assert self.caps, 'Driver capabilities must be defined'
-        if not {direct_protocol, direct_host, direct_port, direct_path}.issubset(set(self.caps)):
-            message = 'Direct connect capabilities from server were:\n'
-            for key in [direct_protocol, direct_host, direct_port, direct_path]:
-                message += f"{key}: '{self.caps.get(key, '')}' "
-            logger.debug(message)
-            return
-
-        protocol = self.caps[direct_protocol]
-        hostname = self.caps[direct_host]
-        port = self.caps[direct_port]
-        path = self.caps[direct_path]
-        executor = f'{protocol}://{hostname}:{port}{path}'
-
-        logger.debug('Updated request endpoint to %s', executor)
-        # Override command executor.
-        if isinstance(self.command_executor, AppiumConnection):  # type: ignore
-            self.command_executor = AppiumConnection(executor, keep_alive=keep_alive)
-        else:
-            self.command_executor = RemoteConnection(executor, keep_alive=keep_alive)
-        self._add_commands()
+        pass
 
     # https://github.com/SeleniumHQ/selenium/blob/06fdf2966df6bca47c0ae45e8201cd30db9b9a49/py/selenium/webdriver/remote/webdriver.py#L277
     # noinspection PyAttributeOutsideInit
@@ -337,29 +303,7 @@ class WebDriver(
              for more details.
             browser_profile: Browser profile
         """
-        if not isinstance(capabilities, (dict, AppiumOptions)):
-            raise InvalidArgumentException('Capabilities must be a dictionary or AppiumOptions instance')
-
-        w3c_caps = AppiumOptions.as_w3c(capabilities) if isinstance(capabilities, dict) else capabilities.to_w3c()
-        response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
-        # https://w3c.github.io/webdriver/#new-session
-        if not isinstance(response, dict):
-            raise SessionNotCreatedException(
-                f'A valid W3C session creation response must be a dictionary. Got "{response}" instead'
-            )
-        # Due to a W3C spec parsing misconception some servers
-        # pack the createSession response stuff into 'value' dictionary and
-        # some other put it to the top level of the response JSON nesting hierarchy
-        get_response_value: Callable[[str], Optional[Any]] = lambda key: (
-            response.get(key) or (response['value'].get(key) if isinstance(response.get('value'), dict) else None)
-        )
-        session_id = get_response_value('sessionId')
-        if not session_id:
-            raise SessionNotCreatedException(
-                f'A valid W3C session creation response must contain a non-empty "sessionId" entry. Got "{response}" instead'
-            )
-        self.session_id = session_id
-        self.caps = get_response_value('capabilities') or {}
+        pass
 
     def get_status(self) -> Dict:
         """
@@ -372,7 +316,7 @@ class WebDriver(
             dict: The status information
 
         """
-        return self.execute(Command.GET_STATUS)['value']
+        pass
 
     def create_web_element(self, element_id: Union[int, str]) -> MobileWebElement:
         """Creates a web element with the specified element_id.
@@ -386,7 +330,7 @@ class WebDriver(
         Returns:
             `MobileWebElement`
         """
-        return MobileWebElement(self, element_id)
+        pass
 
     @property
     def switch_to(self) -> MobileSwitchTo:
@@ -398,8 +342,7 @@ class WebDriver(
             `appium.webdriver.switch_to.MobileSwitchTo`
 
         """
-
-        return MobileSwitchTo(self)
+        pass
 
     # MJSONWP for Selenium v4
     @property  # type: ignore[override]
@@ -413,7 +356,7 @@ class WebDriver(
 
                 orientation = driver.orientation
         """
-        return self.execute(Command.GET_SCREEN_ORIENTATION)['value']
+        pass
 
     # MJSONWP for Selenium v4
     @orientation.setter
@@ -429,11 +372,7 @@ class WebDriver(
 
                 driver.orientation = 'landscape'
         """
-        allowed_values = ['LANDSCAPE', 'PORTRAIT']
-        if value.upper() in allowed_values:
-            self.execute(Command.SET_SCREEN_ORIENTATION, {'orientation': value})
-        else:
-            raise WebDriverException("You can only set the orientation to 'LANDSCAPE' and 'PORTRAIT'")
+        pass
 
     def assert_extension_exists(self, ext_name: str) -> Self:
         """
@@ -450,9 +389,7 @@ class WebDriver(
         Raises:
             UnknownMethodException: If the extension has been marked as absent once
         """
-        if ext_name in self._absent_extensions:
-            raise UnknownMethodException()
-        return self
+        pass
 
     def mark_extension_absence(self, ext_name: str) -> Self:
         """
@@ -465,33 +402,5 @@ class WebDriver(
         Returns:
             self instance for chaining
         """
-        logger.debug(f'Marking driver extension "{ext_name}" as absent for the current instance')
-        self._absent_extensions.add(ext_name)
-        return self
+        pass
 
-    def _add_commands(self) -> None:
-        # call the overridden command binders from all mixin classes except for
-        # appium.webdriver.webdriver.WebDriver and its sub-classes
-        # https://github.com/appium/python-client/issues/342
-        for mixin_class in filter(lambda x: not issubclass(x, WebDriver), self.__class__.__mro__):
-            if hasattr(mixin_class, self._add_commands.__name__):
-                get_atter = getattr(mixin_class, self._add_commands.__name__, None)
-                if get_atter:
-                    get_atter(self)
-
-        self.command_executor.add_command(Command.GET_STATUS, 'GET', '/status')
-
-        # TODO Move commands for element to webelement
-        self.command_executor.add_command(Command.CLEAR, 'POST', '/session/$sessionId/element/$id/clear')
-        self.command_executor.add_command(
-            Command.LOCATION_IN_VIEW,
-            'GET',
-            '/session/$sessionId/element/$id/location_in_view',
-        )
-
-        # MJSONWP for Selenium v4
-        self.command_executor.add_command(Command.IS_ELEMENT_DISPLAYED, 'GET', '/session/$sessionId/element/$id/displayed')
-        self.command_executor.add_command(Command.GET_CAPABILITIES, 'GET', '/session/$sessionId')
-
-        self.command_executor.add_command(Command.GET_SCREEN_ORIENTATION, 'GET', '/session/$sessionId/orientation')
-        self.command_executor.add_command(Command.SET_SCREEN_ORIENTATION, 'POST', '/session/$sessionId/orientation')

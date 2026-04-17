@@ -28,11 +28,11 @@ class IosSimulatorLogsPredicateOption(SupportsCapabilities):
         """
         Get Simulator log filtering predicate.
         """
-        return self.get_capability(IOS_SIMULATOR_LOGS_PREDICATE)
+        pass
 
     @ios_simulator_logs_predicate.setter
     def ios_simulator_logs_predicate(self, value: bool) -> None:
         """
         Set the --predicate flag in the ios simulator logs.
         """
-        self.set_capability(IOS_SIMULATOR_LOGS_PREDICATE, value)
+        pass

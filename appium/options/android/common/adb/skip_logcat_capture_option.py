@@ -29,7 +29,7 @@ class SkipLogcatCaptureOption(SupportsCapabilities):
         Whether to delete all the existing logs in the
         device buffer before starting a new test.
         """
-        return self.get_capability(SKIP_LOGCAT_CAPTURE)
+        pass
 
     @skip_logcat_capture.setter
     def skip_logcat_capture(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class SkipLogcatCaptureOption(SupportsCapabilities):
         Being set to true disables automatic logcat output collection during the test run.
         false by default
         """
-        self.set_capability(SKIP_LOGCAT_CAPTURE, value)
+        pass

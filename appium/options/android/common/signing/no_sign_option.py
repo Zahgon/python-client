@@ -28,7 +28,7 @@ class NoSignOption(SupportsCapabilities):
         """
         Whether to skip application signing.
         """
-        return self.get_capability(NO_SIGN)
+        pass
 
     @no_sign.setter
     def no_sign(self, value: bool) -> None:
@@ -39,4 +39,4 @@ class NoSignOption(SupportsCapabilities):
         and makes the driver to use the application package as is. This option
         does not affect .apks packages as these are expected to be already signed.
         """
-        self.set_capability(NO_SIGN, value)
+        pass

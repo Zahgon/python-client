@@ -28,7 +28,7 @@ class UnlockTypeOption(SupportsCapabilities):
         """
         Unlock type.
         """
-        return self.get_capability(UNLOCK_TYPE)
+        pass
 
     @unlock_type.setter
     def unlock_type(self, value: str) -> None:
@@ -37,4 +37,4 @@ class UnlockTypeOption(SupportsCapabilities):
         Read the [Unlock tutorial](https://github.com/appium/appium-android-driver/blob/master/docs/UNLOCK.md)
         for more details.
         """
-        self.set_capability(UNLOCK_TYPE, value)
+        pass

@@ -28,7 +28,7 @@ class ShowXcodeLogOption(SupportsCapabilities):
         """
         Whether to display the output of the Xcode command used to run the tests.
         """
-        return self.get_capability(SHOW_XCODE_LOG)
+        pass
 
     @show_xcode_log.setter
     def show_xcode_log(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class ShowXcodeLogOption(SupportsCapabilities):
         server logs. If this is true, there will be lots of extra logging at startup.
         Defaults to false.
         """
-        self.set_capability(SHOW_XCODE_LOG, value)
+        pass

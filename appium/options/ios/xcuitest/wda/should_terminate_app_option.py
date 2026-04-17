@@ -28,7 +28,7 @@ class ShouldTerminateAppOption(SupportsCapabilities):
         """
         Whether to enforce app termination on session quit.
         """
-        return self.get_capability(SHOULD_TERMINATE_APP)
+        pass
 
     @should_terminate_app.setter
     def should_terminate_app(self, value: bool) -> None:
@@ -39,4 +39,4 @@ class ShouldTerminateAppOption(SupportsCapabilities):
         by setting bundleId, or implicitly, by providing app).
         Default is true unless noReset capability is set to true.
         """
-        self.set_capability(SHOULD_TERMINATE_APP, value)
+        pass

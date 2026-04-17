@@ -68,13 +68,7 @@ class ImagesComparison(CanExecuteCommands):
             rect2 (dict): The bounding rect for the `points2` array or a zero rect if not enough matching points
                 were found. The rect is represented by a dictionary with 'x', 'y', 'width' and 'height' keys
         """
-        options = {
-            'mode': 'matchFeatures',
-            'firstImage': _adjust_image_payload(base64_image1),
-            'secondImage': _adjust_image_payload(base64_image2),
-            'options': opts,
-        }
-        return self.execute(Command.COMPARE_IMAGES, options)['value']
+        pass
 
     def find_image_occurrence(
         self, base64_full_image: Base64Payload, base64_partial_image: Base64Payload, **opts: Any
@@ -102,13 +96,7 @@ class ImagesComparison(CanExecuteCommands):
                 rect (dict): The region of the partial image occurrence on the full image.
                     The rect is represented by a dictionary with 'x', 'y', 'width' and 'height' keys
         """
-        options = {
-            'mode': 'matchTemplate',
-            'firstImage': _adjust_image_payload(base64_full_image),
-            'secondImage': _adjust_image_payload(base64_partial_image),
-            'options': opts,
-        }
-        return self.execute(Command.COMPARE_IMAGES, options)['value']
+        pass
 
     def get_images_similarity(
         self, base64_image1: Base64Payload, base64_image2: Base64Payload, **opts: Any
@@ -134,20 +122,7 @@ class ImagesComparison(CanExecuteCommands):
                 score (float): The similarity score as a float number in range [0.0, 1.0].
                     1.0 is the highest score (means both images are totally equal).
         """
-        options = {
-            'mode': 'getSimilarity',
-            'firstImage': _adjust_image_payload(base64_image1),
-            'secondImage': _adjust_image_payload(base64_image2),
-            'options': opts,
-        }
-        return self.execute(Command.COMPARE_IMAGES, options)['value']
-
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(Command.COMPARE_IMAGES, 'POST', '/session/$sessionId/appium/compare_images')
+        pass
 
 
-def _adjust_image_payload(payload: Base64Payload) -> str:
-    try:
-        return payload if isinstance(payload, str) else payload.decode('utf-8')
-    except UnicodeDecodeError as e:
-        raise ValueError('The image payload cannot be serialized to a string. Make sure to base64-encode it first') from e
+

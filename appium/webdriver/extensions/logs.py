@@ -30,7 +30,7 @@ class Logs(CanExecuteCommands):
 
                 driver.log_types
         """
-        return self.execute(Command.GET_AVAILABLE_LOG_TYPES)['value']
+        pass
 
     def get_log(self, log_type: str) -> List[Dict[str, Any]]:
         """Gets the log for a given log type.
@@ -46,8 +46,5 @@ class Logs(CanExecuteCommands):
                 driver.get_log('client')
                 driver.get_log('server')
         """
-        return self.execute(Command.GET_LOG, {'type': log_type})['value']
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(Command.GET_LOG, 'POST', '/session/$sessionId/se/log')
-        self.command_executor.add_command(Command.GET_AVAILABLE_LOG_TYPES, 'GET', '/session/$sessionId/se/log/types')

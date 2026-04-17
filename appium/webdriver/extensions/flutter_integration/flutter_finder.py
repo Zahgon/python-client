@@ -28,28 +28,12 @@ class FlutterFinder:
         self.using = using
         self.value = value
 
-    @staticmethod
-    def by_key(value: str) -> 'FlutterFinder':
-        return FlutterFinder(cast(AppiumByType, AppiumBy.FLUTTER_INTEGRATION_KEY), value)
 
     @staticmethod
     def by_text(value: str) -> 'FlutterFinder':
         return FlutterFinder(cast(AppiumByType, AppiumBy.FLUTTER_INTEGRATION_TEXT), value)
 
-    @staticmethod
-    def by_semantics_label(value: str) -> 'FlutterFinder':
-        return FlutterFinder(cast(AppiumByType, AppiumBy.FLUTTER_INTEGRATION_SEMANTICS_LABEL), value)
 
-    @staticmethod
-    def by_type(value: str) -> 'FlutterFinder':
-        return FlutterFinder(cast(AppiumByType, AppiumBy.FLUTTER_INTEGRATION_TYPE), value)
 
-    @staticmethod
-    def by_text_containing(value: str) -> 'FlutterFinder':
-        return FlutterFinder(cast(AppiumByType, AppiumBy.FLUTTER_INTEGRATION_TEXT_CONTAINING), value)
 
-    def to_dict(self) -> dict:
-        return {'using': self.using, 'value': self.value}
 
-    def as_args(self) -> Tuple[str, str]:
-        return self.using, self.value

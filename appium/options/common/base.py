@@ -102,15 +102,7 @@ class AppiumOptions(
         Returns:
             W3C session request object
         """
-
-        def process_key(k: str) -> str:
-            key = AppiumOptions._OSS_W3C_CONVERSION.get(k, k)
-            if key in AppiumOptions.W3C_CAPABILITY_NAMES:
-                return key
-            return key if ':' in key else f'{APPIUM_PREFIX}{key}'
-
-        processed_caps = {process_key(k): v for k, v in copy.deepcopy(capabilities).items()}
-        return {'capabilities': {'firstMatch': [{}], 'alwaysMatch': processed_caps}}
+        pass
 
     def to_w3c(self) -> Dict:
         """
@@ -118,11 +110,6 @@ class AppiumOptions(
 
         :return: W3C session request object
         """
-        return self.as_w3c(self.to_capabilities())
+        pass
 
-    def to_capabilities(self) -> Dict:
-        return copy.copy(self._caps)
 
-    @property
-    def default_capabilities(self) -> Dict:
-        return {}

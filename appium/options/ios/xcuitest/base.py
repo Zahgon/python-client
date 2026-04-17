@@ -219,9 +219,3 @@ class XCUITestOptions(
     WebviewConnectRetriesOption,
     WebviewConnectTimeoutOption,
 ):
-    @property
-    def default_capabilities(self) -> Dict:
-        return {
-            AUTOMATION_NAME: 'XCUITest',
-            PLATFORM_NAME: 'iOS',
-        }

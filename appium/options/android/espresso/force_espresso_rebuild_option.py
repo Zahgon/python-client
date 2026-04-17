@@ -28,7 +28,7 @@ class ForceEspressoRebuildOption(SupportsCapabilities):
         """
         Whether to force Espresso server rebuild on a new session startup.
         """
-        return self.get_capability(FORCE_ESPRESSO_REBUILD)
+        pass
 
     @force_espresso_rebuild.setter
     def force_espresso_rebuild(self, value: bool) -> None:
@@ -38,4 +38,4 @@ class ForceEspressoRebuildOption(SupportsCapabilities):
         it when it is necessary, because rebuilding process needs extra time.
         false by default.
         """
-        self.set_capability(FORCE_ESPRESSO_REBUILD, value)
+        pass

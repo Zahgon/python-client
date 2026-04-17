@@ -29,7 +29,7 @@ class ChromedriverDisableBuildCheckOption(SupportsCapabilities):
         Whether to disable the compatibility validation between the current
         chromedriver and the destination browser/web view.
         """
-        return self.get_capability(CHROMEDRIVER_DISABLE_BUILD_CHECK)
+        pass
 
     @chromedriver_disable_build_check.setter
     def chromedriver_disable_build_check(self, value: bool) -> None:
@@ -38,4 +38,4 @@ class ChromedriverDisableBuildCheckOption(SupportsCapabilities):
         chromedriver and the destination browser/web view. Use it with care.
         false by default.
         """
-        self.set_capability(CHROMEDRIVER_DISABLE_BUILD_CHECK, value)
+        pass

@@ -28,7 +28,7 @@ class UseJsonSourceOption(SupportsCapabilities):
         """
         Whether to get JSON source from WDA and transform it to XML on the driver side.
         """
-        return self.get_capability(USE_JSON_SOURCE)
+        pass
 
     @use_json_source.setter
     def use_json_source(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class UseJsonSourceOption(SupportsCapabilities):
         Whether to get JSON source from WDA and transform it to XML on the driver side.
         Defaults to false.
         """
-        self.set_capability(USE_JSON_SOURCE, value)
+        pass

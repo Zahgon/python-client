@@ -28,7 +28,7 @@ class SimulatorTracePointerOption(SupportsCapabilities):
         """
         Whether to highlight pointer moves in the Simulator window.
         """
-        return self.get_capability(SIMULATOR_TRACE_POINTER)
+        pass
 
     @simulator_trace_pointer.setter
     def simulator_trace_pointer(self, value: bool) -> None:
@@ -38,4 +38,4 @@ class SimulatorTracePointerOption(SupportsCapabilities):
         startup in order for this capability to be applied properly.
         false by default.
         """
-        self.set_capability(SIMULATOR_TRACE_POINTER, value)
+        pass

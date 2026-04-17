@@ -213,9 +213,3 @@ class UiAutomator2Options(
     DisableSuppressAccessibilityServiceOption,
     UserProfileOption,
 ):
-    @property
-    def default_capabilities(self) -> Dict:
-        return {
-            AUTOMATION_NAME: 'UIAutomator2',
-            PLATFORM_NAME: 'Android',
-        }

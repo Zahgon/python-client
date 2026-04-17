@@ -28,7 +28,7 @@ class ResultBundlePathOption(SupportsCapabilities):
         """
         Path where the resulting XCTest bundle should be stored.
         """
-        return self.get_capability(RESULT_BUNDLE_PATH)
+        pass
 
     @result_bundle_path.setter
     def result_bundle_path(self, value: str) -> None:
@@ -39,4 +39,4 @@ class ResultBundlePathOption(SupportsCapabilities):
         Specifying useNewWDA to true may help there. Please read 'man xcodebuild'
         for more details.
         """
-        self.set_capability(RESULT_BUNDLE_PATH, value)
+        pass

@@ -29,8 +29,7 @@ class WebviewConnectTimeoutOption(SupportsCapabilities):
         """
         Timeout to wait for the initial presence of webviews.
         """
-        value = self.get_capability(WEBVIEW_CONNECT_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @webview_connect_timeout.setter
     def webview_connect_timeout(self, value: Union[timedelta, int]) -> None:
@@ -38,6 +37,4 @@ class WebviewConnectTimeoutOption(SupportsCapabilities):
         The time to wait for the initial presence of webviews in
         MobileSafari or hybrid apps. Defaults to 0ms.
         """
-        self.set_capability(
-            WEBVIEW_CONNECT_TIMEOUT, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value
-        )
+        pass

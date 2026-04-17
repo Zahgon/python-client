@@ -28,7 +28,7 @@ class EnableAsyncExecuteFromHttpsOption(SupportsCapabilities):
         """
         Whether to allow simulators to execute async JavaScript on pages using HTTPS.
         """
-        return self.get_capability(ENABLE_ASYNC_EXECUTE_FROM_HTTPS)
+        pass
 
     @enable_async_execute_from_https.setter
     def enable_async_execute_from_https(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class EnableAsyncExecuteFromHttpsOption(SupportsCapabilities):
         Capability to allow simulators to execute asynchronous JavaScript
         on pages using HTTPS. Defaults to false.
         """
-        self.set_capability(ENABLE_ASYNC_EXECUTE_FROM_HTTPS, value)
+        pass

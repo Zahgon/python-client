@@ -28,11 +28,11 @@ class ChromedriverExecutableOption(SupportsCapabilities):
         """
         Path to the chromedriver executable on the server file system.
         """
-        return self.get_capability(CHROMEDRIVER_EXECUTABLE)
+        pass
 
     @chromedriver_executable.setter
     def chromedriver_executable(self, value: str) -> None:
         """
         Full path to the chromedriver executable on the server file system.
         """
-        self.set_capability(CHROMEDRIVER_EXECUTABLE, value)
+        pass

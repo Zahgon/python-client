@@ -29,7 +29,7 @@ class AutoGrantPermissionsOption(SupportsCapabilities):
         Whether to grant all the requested application permissions
         automatically when a test starts.
         """
-        return self.get_capability(AUTO_GRANT_PERMISSIONS)
+        pass
 
     @auto_grant_permissions.setter
     def auto_grant_permissions(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class AutoGrantPermissionsOption(SupportsCapabilities):
         Whether to grant all the requested application permissions
         automatically when a test starts(true). false by default.
         """
-        self.set_capability(AUTO_GRANT_PERMISSIONS, value)
+        pass

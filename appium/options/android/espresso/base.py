@@ -213,9 +213,3 @@ class EspressoOptions(
     ActivityOptionsOption,
     AppLocaleOption,
 ):
-    @property
-    def default_capabilities(self) -> Dict:
-        return {
-            AUTOMATION_NAME: 'Espresso',
-            PLATFORM_NAME: 'Android',
-        }

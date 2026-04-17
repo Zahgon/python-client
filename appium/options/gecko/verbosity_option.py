@@ -28,7 +28,7 @@ class VerbosityOption(SupportsCapabilities):
         """
         The verbosity level of driver logging.
         """
-        return self.get_capability(VERBOSITY)
+        pass
 
     @verbosity.setter
     def verbosity(self, value: str) -> None:
@@ -37,4 +37,4 @@ class VerbosityOption(SupportsCapabilities):
         By default, minimum verbosity is applied.
         Either 'debug' or 'trace'.
         """
-        self.set_capability(VERBOSITY, value)
+        pass

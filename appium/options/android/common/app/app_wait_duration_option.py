@@ -29,8 +29,7 @@ class AppWaitDurationOption(SupportsCapabilities):
         """
         Identifier of the app package to wait for.
         """
-        value = self.get_capability(APP_WAIT_DURATION)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @app_wait_duration.setter
     def app_wait_duration(self, value: Union[timedelta, int]) -> None:
@@ -38,4 +37,4 @@ class AppWaitDurationOption(SupportsCapabilities):
         Maximum amount of time to wait until the application under test is started
         (e.g. an activity returns the control to the caller). 20000 ms by default.
         """
-        self.set_capability(APP_WAIT_DURATION, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value)
+        pass

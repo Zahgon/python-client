@@ -28,7 +28,7 @@ class ExtractChromeAndroidPackageFromContextNameOption(SupportsCapabilities):
         """
         Whether to use the android package identifier associated with the context name.
         """
-        return self.get_capability(EXTRACT_CHROME_ANDROID_PACKAGE_FROM_CONTEXT_NAME)
+        pass
 
     @extract_chrome_android_package_from_context_name.setter
     def extract_chrome_android_package_from_context_name(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class ExtractChromeAndroidPackageFromContextNameOption(SupportsCapabilities):
         with the context name, rather than the package of the application under test.
         false by default.
         """
-        self.set_capability(EXTRACT_CHROME_ANDROID_PACKAGE_FROM_CONTEXT_NAME, value)
+        pass

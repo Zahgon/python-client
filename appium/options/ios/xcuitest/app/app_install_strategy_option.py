@@ -28,7 +28,7 @@ class AppInstallStrategyOption(SupportsCapabilities):
         """
         App install strategy.
         """
-        return self.get_capability(APP_INSTALL_STRATEGY)
+        pass
 
     @app_install_strategy.setter
     def app_install_strategy(self, value: str) -> None:
@@ -43,4 +43,4 @@ class AppInstallStrategyOption(SupportsCapabilities):
         install the app; obviously the tool must be installed separately
         first and must be present in PATH before it could be used.
         """
-        self.set_capability(APP_INSTALL_STRATEGY, value)
+        pass

@@ -28,7 +28,7 @@ class DisableAutomaticScreenshotsOption(SupportsCapabilities):
         """
         Whether to disable automatic XCTest screenshots.
         """
-        return self.get_capability(DISABLE_AUTOMATIC_SCREENSHOTS)
+        pass
 
     @disable_automatic_screenshots.setter
     def disable_automatic_screenshots(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class DisableAutomaticScreenshotsOption(SupportsCapabilities):
         Default is up to WebDriverAgent's config to decide, which currently
         defaults to true.
         """
-        self.set_capability(DISABLE_AUTOMATIC_SCREENSHOTS, value)
+        pass

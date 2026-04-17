@@ -28,11 +28,11 @@ class UdidOption(SupportsCapabilities):
         """
         The unique identifier of the device under test.
         """
-        return self.get_capability(UDID)
+        pass
 
     @udid.setter
     def udid(self, value: str) -> None:
         """
         Set the unique identifier of the device under test.
         """
-        self.set_capability(UDID, value)
+        pass

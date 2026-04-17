@@ -28,7 +28,7 @@ class AppActivityOption(SupportsCapabilities):
         """
         Name of the main app activity.
         """
-        return self.get_capability(APP_ACTIVITY)
+        pass
 
     @app_activity.setter
     def app_activity(self, value: str) -> None:
@@ -36,4 +36,4 @@ class AppActivityOption(SupportsCapabilities):
         Main application activity identifier. If not provided then the driver
         will try to detect it automatically from the package provided by the app capability.
         """
-        self.set_capability(APP_ACTIVITY, value)
+        pass

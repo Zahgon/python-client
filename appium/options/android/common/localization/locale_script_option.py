@@ -28,7 +28,7 @@ class LocaleScriptOption(SupportsCapabilities):
         """
         Canonical name of the locale to be set for the app under test.
         """
-        return self.get_capability(LOCALE_SCRIPT)
+        pass
 
     @locale_script.setter
     def locale_script(self, value: str) -> None:
@@ -37,4 +37,4 @@ class LocaleScriptOption(SupportsCapabilities):
         for example zh-Hans-CN.
         See https://developer.android.com/reference/java/util/Locale.html for more details.
         """
-        self.set_capability(LOCALE_SCRIPT, value)
+        pass

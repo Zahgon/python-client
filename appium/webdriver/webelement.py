@@ -60,31 +60,14 @@ class WebElement(SeleniumWebElement):
         Returns:
             The given attribute or property of the element
         """
-
-        resp = self._execute(RemoteCommand.GET_ELEMENT_ATTRIBUTE, {'name': name})
-        attribute_value = resp.get('value')
-
-        if attribute_value is None:
-            return None
-
-        if isinstance(attribute_value, dict):
-            return attribute_value
-
-        # Convert to str along to the spec
-        if not isinstance(attribute_value, str):
-            attribute_value = str(attribute_value)
-
-        if name != 'value' and attribute_value.lower() in ('true', 'false'):
-            return attribute_value.lower()
-
-        return attribute_value
+        pass
 
     def is_displayed(self) -> bool:
         """Whether the element is visible to a user.
 
         Override for Appium
         """
-        return self._execute(Command.IS_ELEMENT_DISPLAYED)['value']
+        pass
 
     def clear(self) -> Self:  # type: ignore[override]
         """Clears text.
@@ -94,12 +77,7 @@ class WebElement(SeleniumWebElement):
         Returns:
             `appium.webdriver.webelement.WebElement`
         """
-
-        # NOTE: this method is overridden because the selenium client returned None instead of self.
-        # Appium python client would like to allow users to chain methods.
-        data = {'id': self.id}
-        self._execute(Command.CLEAR, data)
-        return self
+        pass
 
     @property
     def location_in_view(self) -> Dict[str, int]:
@@ -113,7 +91,7 @@ class WebElement(SeleniumWebElement):
         Returns:
             dict: The location of an element relative to the view
         """
-        return self._execute(Command.LOCATION_IN_VIEW)['value']
+        pass
 
     # Override
     def send_keys(self, *value: str) -> Self:  # type: ignore[override]
@@ -125,6 +103,4 @@ class WebElement(SeleniumWebElement):
         Returns:
             `appium.webdriver.webelement.WebElement`
         """
-        keys = keys_to_typing(value)
-        self._execute(RemoteCommand.SEND_KEYS_TO_ELEMENT, {'text': ''.join(keys), 'value': keys})
-        return self
+        pass

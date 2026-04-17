@@ -28,7 +28,7 @@ class ChromedriverArgsOption(SupportsCapabilities):
         """
         Array of chromedriver CLI arguments.
         """
-        return self.get_capability(CHROMEDRIVER_ARGS)
+        pass
 
     @chromedriver_args.setter
     def chromedriver_args(self, value: List[str]) -> None:
@@ -38,4 +38,4 @@ class ChromedriverArgsOption(SupportsCapabilities):
         Note, that not all command line arguments that are available for the desktop
         browser are also available for the mobile one.
         """
-        self.set_capability(CHROMEDRIVER_ARGS, value)
+        pass

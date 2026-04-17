@@ -29,8 +29,7 @@ class Uiautomator2ServerReadTimeoutOption(SupportsCapabilities):
         """
         Maximum timeout to wait for an HTTP response from UiAutomator2Server.
         """
-        value = self.get_capability(UIAUTOMATOR2_SERVER_READ_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @uiautomator2_server_read_timeout.setter
     def uiautomator2_server_read_timeout(self, value: Union[timedelta, int]) -> None:
@@ -40,7 +39,4 @@ class Uiautomator2ServerReadTimeoutOption(SupportsCapabilities):
         then expect driver commands to fail with timeout of Xms exceeded error.
         240000 ms by default
         """
-        self.set_capability(
-            UIAUTOMATOR2_SERVER_READ_TIMEOUT,
-            int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value,
-        )
+        pass

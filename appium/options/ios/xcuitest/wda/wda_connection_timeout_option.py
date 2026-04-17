@@ -29,8 +29,7 @@ class WdaConnectionTimeoutOption(SupportsCapabilities):
         """
         Maximum timeout to wait until WDA responds to HTTP requests.
         """
-        value = self.get_capability(WDA_CONNECTION_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @wda_connection_timeout.setter
     def wda_connection_timeout(self, value: Union[timedelta, int]) -> None:
@@ -38,6 +37,4 @@ class WdaConnectionTimeoutOption(SupportsCapabilities):
         Connection timeout to wait for a response from WebDriverAgent.
         Defaults to 240000ms.
         """
-        self.set_capability(
-            WDA_CONNECTION_TIMEOUT, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value
-        )
+        pass

@@ -28,7 +28,7 @@ class MjpegScreenshotUrlOption(SupportsCapabilities):
         """
         URL of a service that provides realtime device screenshots in MJPEG format.
         """
-        return self.get_capability(MJPEG_SCREENSHOT_URL)
+        pass
 
     @mjpeg_screenshot_url.setter
     def mjpeg_screenshot_url(self, value: str) -> None:
@@ -37,4 +37,4 @@ class MjpegScreenshotUrlOption(SupportsCapabilities):
         If provided then the actual command to retrieve a screenshot will be
         requesting pictures from this service rather than directly from the server.
         """
-        self.set_capability(MJPEG_SCREENSHOT_URL, value)
+        pass

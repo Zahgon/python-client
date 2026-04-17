@@ -28,7 +28,7 @@ class ShowIosLogOption(SupportsCapabilities):
         """
         Whether to show any logs captured from a device in the appium logs.
         """
-        return self.get_capability(SHOW_IOS_LOG)
+        pass
 
     @show_ios_log.setter
     def show_ios_log(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class ShowIosLogOption(SupportsCapabilities):
         Whether to show any logs captured from a device in the appium logs.
         Default false.
         """
-        self.set_capability(SHOW_IOS_LOG, value)
+        pass

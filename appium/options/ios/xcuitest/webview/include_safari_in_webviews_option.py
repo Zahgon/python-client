@@ -29,7 +29,7 @@ class IncludeSafariInWebviewsOption(SupportsCapabilities):
         Whether to add Safari web views to the list of contexts available
         during a native/webview app test.
         """
-        return self.get_capability(INCLUDE_SAFARI_IN_WEBVIEWS)
+        pass
 
     @include_safari_in_webviews.setter
     def include_safari_in_webviews(self, value: bool) -> None:
@@ -38,4 +38,4 @@ class IncludeSafariInWebviewsOption(SupportsCapabilities):
         native/webview app test. This is useful if the test opens Safari and
         needs to be able to interact with it. Defaults to false.
         """
-        self.set_capability(INCLUDE_SAFARI_IN_WEBVIEWS, value)
+        pass

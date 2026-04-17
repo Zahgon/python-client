@@ -28,7 +28,7 @@ class DisableSuppressAccessibilityServiceOption(SupportsCapabilities):
         """
         Whether to suppress accessibility services.
         """
-        return self.get_capability(DISABLE_SUPPRESS_ACCESSIBILITY_SERVICE)
+        pass
 
     @disable_suppress_accessibility_service.setter
     def disable_suppress_accessibility_service(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class DisableSuppressAccessibilityServiceOption(SupportsCapabilities):
         accessibility services during the automated test. This might be useful
         if your automated test needs these services. false by default.
         """
-        self.set_capability(DISABLE_SUPPRESS_ACCESSIBILITY_SERVICE, value)
+        pass

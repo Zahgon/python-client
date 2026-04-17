@@ -28,7 +28,7 @@ class ProcessArgumentsOption(SupportsCapabilities):
         """
         Command line arguments and/or environment variables of the application under test.
         """
-        return self.get_capability(PROCESS_ARGUMENTS)
+        pass
 
     @process_arguments.setter
     def process_arguments(self, value: Dict[str, Union[List[str], Dict[str, str]]]) -> None:
@@ -39,4 +39,4 @@ class ProcessArgumentsOption(SupportsCapabilities):
         arguments represented as strings and the value of 'env' is expected to
         be a dictionary of environment variable names and their values (also strings).
         """
-        self.set_capability(PROCESS_ARGUMENTS, value)
+        pass

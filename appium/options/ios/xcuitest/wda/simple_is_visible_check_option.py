@@ -28,7 +28,7 @@ class SimpleIsVisibleCheckOption(SupportsCapabilities):
         """
         Whether to use native methods for determining visibility of elements.
         """
-        return self.get_capability(SIMPLE_IS_VISIBLE_CHECK)
+        pass
 
     @simple_is_visible_check.setter
     def simple_is_visible_check(self, value: bool) -> None:
@@ -39,4 +39,4 @@ class SimpleIsVisibleCheckOption(SupportsCapabilities):
         are visible on the screen. This can, however, lead to false results in some
         situations. Defaults to false, except iOS 9.3, where it defaults to true.
         """
-        self.set_capability(SIMPLE_IS_VISIBLE_CHECK, value)
+        pass

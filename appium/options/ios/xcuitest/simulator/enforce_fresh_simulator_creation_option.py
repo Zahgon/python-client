@@ -28,7 +28,7 @@ class EnforceFreshSimulatorCreationOption(SupportsCapabilities):
         """
         Whether to create a new simulator for each new test session.
         """
-        return self.get_capability(ENFORCE_FRESH_SIMULATOR_CREATION)
+        pass
 
     @enforce_fresh_simulator_creation.setter
     def enforce_fresh_simulator_creation(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class EnforceFreshSimulatorCreationOption(SupportsCapabilities):
         Creates a new simulator in session creation and deletes it in session deletion.
         Defaults to false.
         """
-        self.set_capability(ENFORCE_FRESH_SIMULATOR_CREATION, value)
+        pass

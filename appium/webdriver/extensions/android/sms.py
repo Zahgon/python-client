@@ -37,14 +37,5 @@ class Sms(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPresence):
         Returns:
             Union['WebDriver', 'Sms']: Self instance
         """
-        ext_name = 'mobile: sendSms'
-        args = {'phoneNumber': phone_number, 'message': message}
-        try:
-            self.assert_extension_exists(ext_name).execute_script(ext_name, args)
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            self.mark_extension_absence(ext_name).execute(Command.SEND_SMS, args)
-        return self
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(Command.SEND_SMS, 'POST', '/session/$sessionId/appium/device/send_sms')

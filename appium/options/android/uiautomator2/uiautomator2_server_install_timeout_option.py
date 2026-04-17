@@ -29,8 +29,7 @@ class Uiautomator2ServerInstallTimeoutOption(SupportsCapabilities):
         """
         Maximum timeout to wait until UiAutomator2 server is installed on the device.
         """
-        value = self.get_capability(UIAUTOMATOR2_SERVER_INSTALL_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @uiautomator2_server_install_timeout.setter
     def uiautomator2_server_install_timeout(self, value: Union[timedelta, int]) -> None:
@@ -38,7 +37,4 @@ class Uiautomator2ServerInstallTimeoutOption(SupportsCapabilities):
         Set the maximum timeout to wait util UiAutomator2 server is installed on the device.
         20000 ms by default
         """
-        self.set_capability(
-            UIAUTOMATOR2_SERVER_INSTALL_TIMEOUT,
-            int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value,
-        )
+        pass

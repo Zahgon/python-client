@@ -28,7 +28,7 @@ class AllowProvisioningDeviceRegistrationOption(SupportsCapabilities):
         """
         Whether to allow xcodebuild to register your destination device on the developer portal.
         """
-        return self.get_capability(ALLOW_PROVISIONING_DEVICE_REGISTRATION)
+        pass
 
     @allow_provisioning_device_registration.setter
     def allow_provisioning_device_registration(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class AllowProvisioningDeviceRegistrationOption(SupportsCapabilities):
         if necessary. Requires a developer account to have been added in Xcode's Accounts
         preference pane. Defaults to false.
         """
-        self.set_capability(ALLOW_PROVISIONING_DEVICE_REGISTRATION, value)
+        pass

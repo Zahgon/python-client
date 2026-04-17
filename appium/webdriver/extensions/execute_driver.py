@@ -43,18 +43,5 @@ class ExecuteDriver(CanExecuteCommands):
         Raises:
             WebDriverException: If something error happens in the script. The message has the original error message.
         """
+        pass
 
-        class Result:
-            def __init__(self, res: Dict):
-                self.result = res['result']
-                self.logs = res['logs']
-
-        option: Dict[str, Union[str, int]] = {'script': script, 'type': script_type}
-        if timeout_ms is not None:
-            option['timeout'] = timeout_ms
-
-        response = self.execute(Command.EXECUTE_DRIVER, option)['value']
-        return Result(response)
-
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(Command.EXECUTE_DRIVER, 'POST', '/session/$sessionId/appium/execute_driver')

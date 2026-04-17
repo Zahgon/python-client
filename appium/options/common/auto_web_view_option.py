@@ -29,7 +29,7 @@ class AutoWebViewOption(SupportsCapabilities):
         Whether the driver should try to automatically switch
         to a web view context after the session is started.
         """
-        return self.get_capability(AUTO_WEB_VIEW)
+        pass
 
     @auto_web_view.setter
     def auto_web_view(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class AutoWebViewOption(SupportsCapabilities):
         Set whether the driver should try to automatically switch
         a web view context after the session is started.
         """
-        self.set_capability(AUTO_WEB_VIEW, value)
+        pass

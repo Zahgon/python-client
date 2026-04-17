@@ -28,7 +28,7 @@ class AutoAcceptAlertsOption(SupportsCapabilities):
         """
         Whether to accept all alerts automatically.
         """
-        return self.get_capability(AUTO_ACCEPT_ALERTS)
+        pass
 
     @auto_accept_alerts.setter
     def auto_accept_alerts(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class AutoAcceptAlertsOption(SupportsCapabilities):
         Accept all iOS alerts automatically if they pop up. This includes privacy
         access permission alerts (e.g., location, contacts, photos). Default is false.
         """
-        self.set_capability(AUTO_ACCEPT_ALERTS, value)
+        pass

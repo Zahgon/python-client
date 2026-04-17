@@ -29,7 +29,7 @@ class ClearDeviceLogsOnStartOption(SupportsCapabilities):
         Makes the driver to delete all the existing logs in the
         device buffer before starting a new test.
         """
-        return self.get_capability(CLEAR_DEVICE_LOGS_ON_START)
+        pass
 
     @clear_device_logs_on_start.setter
     def clear_device_logs_on_start(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class ClearDeviceLogsOnStartOption(SupportsCapabilities):
         If set to true then the driver deletes all the existing logs in the
         device buffer before starting a new test.
         """
-        self.set_capability(CLEAR_DEVICE_LOGS_ON_START, value)
+        pass

@@ -28,11 +28,11 @@ class SystemHostOption(SupportsCapabilities):
         """
         The name of the host for the internal server to listen on.
         """
-        return self.get_capability(SYSTEM_HOST)
+        pass
 
     @system_host.setter
     def system_host(self, value: str) -> None:
         """
         Set the name of the host for the internal server to listen on.
         """
-        self.set_capability(SYSTEM_HOST, value)
+        pass

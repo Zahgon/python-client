@@ -28,7 +28,7 @@ class MarionettePortOption(SupportsCapabilities):
         """
         The number of the port for the Marionette server to listen on.
         """
-        return self.get_capability(MARIONETTE_PORT)
+        pass
 
     @marionette_port.setter
     def marionette_port(self, value: int) -> None:
@@ -40,4 +40,4 @@ class MarionettePortOption(SupportsCapabilities):
         user-set, Marionette will listen on port 2828, which is the default
         value for this capability.
         """
-        self.set_capability(MARIONETTE_PORT, value)
+        pass

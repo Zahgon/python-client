@@ -38,14 +38,7 @@ class Power(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPresence)
         Returns:
             Union['WebDriver', 'Power']: Self instance
         """
-        ext_name = 'mobile: powerCapacity'
-        args = {'percent': percent}
-        try:
-            self.assert_extension_exists(ext_name).execute_script(ext_name, args)
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            self.mark_extension_absence(ext_name).execute(Command.SET_POWER_CAPACITY, args)
-        return self
+        pass
 
     def set_power_ac(self, ac_state: str) -> Self:
         """Emulate power state change on the connected emulator.
@@ -62,19 +55,5 @@ class Power(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPresence)
         Returns:
             Union['WebDriver', 'Power']: Self instance
         """
-        ext_name = 'mobile: powerAC'
-        args = {'state': ac_state}
-        try:
-            self.assert_extension_exists(ext_name).execute_script(ext_name, args)
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            self.mark_extension_absence(ext_name).execute(Command.SET_POWER_AC, args)
-        return self
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(
-            Command.SET_POWER_CAPACITY,
-            'POST',
-            '/session/$sessionId/appium/device/power_capacity',
-        )
-        self.command_executor.add_command(Command.SET_POWER_AC, 'POST', '/session/$sessionId/appium/device/power_ac')

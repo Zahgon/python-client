@@ -29,11 +29,7 @@ class EspressoBuildConfigOption(SupportsCapabilities):
         """
         Espresso build config.
         """
-        value = self.get_capability(ESPRESSO_BUILD_CONFIG)
-        try:
-            return json.loads(value)
-        except Exception:
-            return value
+        pass
 
     @espresso_build_config.setter
     def espresso_build_config(self, value: Union[Dict[str, Any], str]) -> None:
@@ -43,4 +39,4 @@ class EspressoBuildConfigOption(SupportsCapabilities):
         https://github.com/appium/appium-espresso-driver#espresso-build-config
         for more information on how to properly construct such config.
         """
-        self.set_capability(ESPRESSO_BUILD_CONFIG, value if isinstance(value, str) else json.dumps(value, ensure_ascii=False))
+        pass

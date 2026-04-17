@@ -28,7 +28,7 @@ class LogcatFilterSpecsOption(SupportsCapabilities):
         """
         Logcat filter format.
         """
-        return self.get_capability(LOGCAT_FILTER_SPECS)
+        pass
 
     @logcat_filter_specs.setter
     def logcat_filter_specs(self, value: str) -> None:
@@ -39,4 +39,4 @@ class LogcatFilterSpecsOption(SupportsCapabilities):
         If not specified on the commandline, filterspec is set from ANDROID_LOG_TAGS.
         If no filterspec is found, filter defaults to '*:I'.
         """
-        self.set_capability(LOGCAT_FILTER_SPECS, value)
+        pass

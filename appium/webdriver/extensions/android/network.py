@@ -52,17 +52,7 @@ class Network(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPresenc
         This API only works reliably on emulators (any version) and real devices
         since API level 31.
         """
-        ext_name = 'mobile: getConnectivity'
-        try:
-            result_map = self.assert_extension_exists(ext_name).execute_script(ext_name)
-            return (
-                (NetworkMask.WIFI if result_map['wifi'] else 0)
-                | (NetworkMask.DATA if result_map['data'] else 0)
-                | (NetworkMask.AIRPLANE_MODE if result_map['airplaneMode'] else 0)
-            )
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            return self.mark_extension_absence(ext_name).execute(Command.GET_NETWORK_CONNECTION, {})['value']
+        pass
 
     def set_network_connection(self, connection_type: int) -> int:
         """Sets the network connection type. Android only.
@@ -94,21 +84,7 @@ class Network(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPresenc
         Return:
             int: Set network connection type
         """
-        ext_name = 'mobile: setConnectivity'
-        try:
-            return self.assert_extension_exists(ext_name).execute_script(
-                ext_name,
-                {
-                    'wifi': bool(connection_type & NetworkMask.WIFI),
-                    'data': bool(connection_type & NetworkMask.DATA),
-                    'airplaneMode': bool(connection_type & NetworkMask.AIRPLANE_MODE),
-                },
-            )
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            return self.mark_extension_absence(ext_name).execute(
-                Command.SET_NETWORK_CONNECTION, {'parameters': {'type': connection_type}}
-            )['value']
+        pass
 
     def toggle_wifi(self) -> Self:
         """Toggle the wifi on the device, Android only.
@@ -118,14 +94,7 @@ class Network(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPresenc
         Returns:
             Union['WebDriver', 'Network']: Self instance
         """
-        ext_name = 'mobile: setConnectivity'
-        try:
-            self.assert_extension_exists(ext_name).execute_script(
-                ext_name, {'wifi': not (self.network_connection & NetworkMask.WIFI)}
-            )
-        except UnknownMethodException:
-            self.mark_extension_absence(ext_name).execute(Command.TOGGLE_WIFI, {})
-        return self
+        pass
 
     def set_network_speed(self, speed_type: str) -> Self:
         """Set the network speed emulation.
@@ -142,34 +111,5 @@ class Network(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPresenc
         Returns:
             Union['WebDriver', 'Network']: Self instance
         """
-        constants = extract_const_attributes(NetSpeed)
-        if speed_type not in constants.values():
-            logger.warning(
-                f'{speed_type} is unknown. Consider using one of {list(constants.keys())} constants. '
-                f'(e.g. {NetSpeed.__name__}.LTE)'
-            )
-        ext_name = 'mobile: networkSpeed'
-        try:
-            self.assert_extension_exists(ext_name).execute_script(ext_name, {'speed': speed_type})
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            self.mark_extension_absence(ext_name).execute(Command.SET_NETWORK_SPEED, {'netspeed': speed_type})
-        return self
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(Command.TOGGLE_WIFI, 'POST', '/session/$sessionId/appium/device/toggle_wifi')
-        self.command_executor.add_command(
-            Command.GET_NETWORK_CONNECTION,
-            'GET',
-            '/session/$sessionId/network_connection',
-        )
-        self.command_executor.add_command(
-            Command.SET_NETWORK_CONNECTION,
-            'POST',
-            '/session/$sessionId/network_connection',
-        )
-        self.command_executor.add_command(
-            Command.SET_NETWORK_SPEED,
-            'POST',
-            '/session/$sessionId/appium/device/network_speed',
-        )

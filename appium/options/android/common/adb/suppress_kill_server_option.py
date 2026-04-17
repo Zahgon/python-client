@@ -28,7 +28,7 @@ class SuppressKillServerOption(SupportsCapabilities):
         """
         Prevents the driver from ever killing the ADB server explicitly.
         """
-        return self.get_capability(SUPPRESS_KILL_SERVER)
+        pass
 
     @suppress_kill_server.setter
     def suppress_kill_server(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class SuppressKillServerOption(SupportsCapabilities):
         Being set to true prevents the driver from ever killing the ADB server explicitly.
         Could be useful if ADB is connected wirelessly. false by default.
         """
-        self.set_capability(SUPPRESS_KILL_SERVER, value)
+        pass

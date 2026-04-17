@@ -29,8 +29,7 @@ class AppPushTimeoutOption(SupportsCapabilities):
         """
         Maximum timeout for application upload.
         """
-        value = self.get_capability(APP_PUSH_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @app_push_timeout.setter
     def app_push_timeout(self, value: Union[timedelta, int]) -> None:
@@ -39,4 +38,4 @@ class AppPushTimeoutOption(SupportsCapabilities):
         Works for real devices only.
         The default value is 30000ms.
         """
-        self.set_capability(APP_PUSH_TIMEOUT, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value)
+        pass

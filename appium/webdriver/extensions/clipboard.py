@@ -41,19 +41,7 @@ class Clipboard(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPrese
         Returns:
             Union['WebDriver', 'Clipboard']: Self instance
         """
-        ext_name = 'mobile: setClipboard'
-        options = {
-            'content': base64.b64encode(content).decode('UTF-8'),
-            'contentType': content_type,
-        }
-        if label:
-            options['label'] = label
-        try:
-            self.assert_extension_exists(ext_name).execute_script(ext_name, options)
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            self.mark_extension_absence(ext_name).execute(Command.SET_CLIPBOARD, options)
-        return self
+        pass
 
     def set_clipboard_text(self, text: str, label: Optional[str] = None) -> Self:
         """Copies the given text to the system clipboard
@@ -65,7 +53,7 @@ class Clipboard(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPrese
         Returns:
             Union['WebDriver', 'Clipboard']: Self instance
         """
-        return self.set_clipboard(bytes(str(text), 'UTF-8'), ClipboardContentType.PLAINTEXT, label)
+        pass
 
     def get_clipboard(self, content_type: str = ClipboardContentType.PLAINTEXT) -> bytes:
         """Receives the content of the system clipboard
@@ -77,14 +65,7 @@ class Clipboard(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPrese
         Returns:
             Clipboard content as bytearray. Or empty bytes if the clipboard is empty
         """
-        ext_name = 'mobile: getClipboard'
-        options = {'contentType': content_type}
-        try:
-            base64_str = self.assert_extension_exists(ext_name).execute_script(ext_name, options)
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            base64_str = self.mark_extension_absence(ext_name).execute(Command.GET_CLIPBOARD, options)['value']
-        return base64.b64decode(base64_str)
+        pass
 
     def get_clipboard_text(self) -> str:
         """Receives the text of the system clipboard
@@ -92,16 +73,5 @@ class Clipboard(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPrese
         Returns:
             The actual clipboard text or an empty string if the clipboard is empty
         """
-        return self.get_clipboard(ClipboardContentType.PLAINTEXT).decode('UTF-8')
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(
-            Command.SET_CLIPBOARD,
-            'POST',
-            '/session/$sessionId/appium/device/set_clipboard',
-        )
-        self.command_executor.add_command(
-            Command.GET_CLIPBOARD,
-            'POST',
-            '/session/$sessionId/appium/device/get_clipboard',
-        )

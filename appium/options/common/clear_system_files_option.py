@@ -28,11 +28,11 @@ class ClearSystemFilesOption(SupportsCapabilities):
         """
         Whether the driver should delete generated files at the end of a session.
         """
-        return self.get_capability(CLEAR_SYSTEM_FILES)
+        pass
 
     @clear_system_files.setter
     def clear_system_files(self, value: bool) -> None:
         """
         Set whether the driver should delete generated files at the end of a session.
         """
-        self.set_capability(CLEAR_SYSTEM_FILES, value)
+        pass

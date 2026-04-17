@@ -29,8 +29,7 @@ class WebkitResponseTimeoutOption(SupportsCapabilities):
         """
         Time to wait for a response from WebKit in a Safari session.
         """
-        value = self.get_capability(WEBKIT_RESPONSE_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @webkit_response_timeout.setter
     def webkit_response_timeout(self, value: Union[timedelta, int]) -> None:
@@ -38,6 +37,4 @@ class WebkitResponseTimeoutOption(SupportsCapabilities):
         (Real device only) Set the time to wait for a response from
         WebKit in a Safari session. Defaults to 5000ms.
         """
-        self.set_capability(
-            WEBKIT_RESPONSE_TIMEOUT, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value
-        )
+        pass

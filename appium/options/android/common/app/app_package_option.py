@@ -28,7 +28,7 @@ class AppPackageOption(SupportsCapabilities):
         """
         App package identifier.
         """
-        return self.get_capability(APP_PACKAGE)
+        pass
 
     @app_package.setter
     def app_package(self, value: str) -> None:
@@ -36,4 +36,4 @@ class AppPackageOption(SupportsCapabilities):
         Application package identifier to be started. If not provided then the driver will
         try to detect it automatically from the package provided by the app capability.
         """
-        self.set_capability(APP_PACKAGE, value)
+        pass

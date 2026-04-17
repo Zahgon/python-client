@@ -28,7 +28,7 @@ class EnvironmentOption(SupportsCapabilities):
         """
         Application environment variables mapping.
         """
-        return self.get_capability(ENVIRONMENT)
+        pass
 
     @environment.setter
     def environment(self, value: Dict[str, str]) -> None:
@@ -38,4 +38,4 @@ class EnvironmentOption(SupportsCapabilities):
         the parent process. This option is only going to be applied if the application
         is not running on session startup.
         """
-        self.set_capability(ENVIRONMENT, value)
+        pass

@@ -28,7 +28,7 @@ class AppArgumentsOption(SupportsCapabilities):
         """
         Application arguments string, for example `/?`.
         """
-        return self.get_capability(APP_ARGUMENTS)
+        pass
 
     @app_arguments.setter
     def app_arguments(self, value: str) -> None:
@@ -37,4 +37,4 @@ class AppArgumentsOption(SupportsCapabilities):
         Make sure arguments are quoted/escaped properly if necessary:
         https://ss64.com/nt/syntax-esc.html
         """
-        self.set_capability(APP_ARGUMENTS, value)
+        pass

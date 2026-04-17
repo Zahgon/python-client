@@ -28,7 +28,7 @@ class MaxTypingFrequencyOption(SupportsCapabilities):
         """
         The number of keystrokes per minute.
         """
-        return self.get_capability(MAX_TYPING_FREQUENCY)
+        pass
 
     @max_typing_frequency.setter
     def max_typing_frequency(self, value: int) -> None:
@@ -37,4 +37,4 @@ class MaxTypingFrequencyOption(SupportsCapabilities):
         are failing because of typing errors, you may want to adjust this.
         Defaults to 60 keystrokes per minute.
         """
-        self.set_capability(MAX_TYPING_FREQUENCY, value)
+        pass

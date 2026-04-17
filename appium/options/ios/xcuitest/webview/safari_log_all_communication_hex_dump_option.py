@@ -29,7 +29,7 @@ class SafariLogAllCommunicationHexDumpOption(SupportsCapabilities):
         Whether to log of plists sent to and received from the Web Inspector
         in hex dump format.
         """
-        return self.get_capability(SAFARI_LOG_ALL_COMMUNICATION_HEX_DUMP)
+        pass
 
     @safari_log_all_communication_hex_dump.setter
     def safari_log_all_communication_hex_dump(self, value: bool) -> None:
@@ -40,4 +40,4 @@ class SafariLogAllCommunicationHexDumpOption(SupportsCapabilities):
         appium:safariLogAllCommunication, this can produce a lot of data in some cases,
         so it is recommended to be used only when necessary. Defaults to false.
         """
-        self.set_capability(SAFARI_LOG_ALL_COMMUNICATION_HEX_DUMP, value)
+        pass

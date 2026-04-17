@@ -34,9 +34,7 @@ class ExecuteMobileCommand(CanExecuteScripts):
             Union['WebDriver', 'ExecuteMobileCommand']: Self instance
 
         """
-        data = {'name': button_name}
-        self.execute_script('mobile: pressButton', data)
-        return self
+        pass
 
     @property
     def battery_info(self) -> Dict[str, Any]:
@@ -59,4 +57,4 @@ class ExecuteMobileCommand(CanExecuteScripts):
                         5: Full
                         Any other value means the state cannot be retrieved
         """
-        return self.execute_script('mobile: batteryInfo')
+        pass

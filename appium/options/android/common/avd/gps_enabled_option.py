@@ -28,7 +28,7 @@ class GpsEnabledOption(SupportsCapabilities):
         """
         State of the GPS service on emulator.
         """
-        return self.get_capability(GPS_ENABLED)
+        pass
 
     @gps_enabled.setter
     def gps_enabled(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class GpsEnabledOption(SupportsCapabilities):
         Set whether to enable (true) or disable (false) GPS service in the Emulator.
         Unset by default, which means to not change the current value.
         """
-        self.set_capability(GPS_ENABLED, value)
+        pass

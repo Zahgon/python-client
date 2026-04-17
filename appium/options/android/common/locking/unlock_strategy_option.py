@@ -28,7 +28,7 @@ class UnlockStrategyOption(SupportsCapabilities):
         """
         Unlock strategy name.
         """
-        return self.get_capability(UNLOCK_STRATEGY)
+        pass
 
     @unlock_strategy.setter
     def unlock_strategy(self, value: str) -> None:
@@ -37,4 +37,4 @@ class UnlockStrategyOption(SupportsCapabilities):
         Setting it to 'uiautomator' will enforce the driver to avoid using special
         ADB shortcuts in order to speed up the unlock procedure.
         """
-        self.set_capability(UNLOCK_STRATEGY, value)
+        pass

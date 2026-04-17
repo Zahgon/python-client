@@ -28,7 +28,7 @@ class ReduceMotionOption(SupportsCapabilities):
         """
         Whether to reduce motion accessibility preference.
         """
-        return self.get_capability(REDUCE_MOTION)
+        pass
 
     @reduce_motion.setter
     def reduce_motion(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class ReduceMotionOption(SupportsCapabilities):
         Setting reduceMotion on helps to reduce flakiness during tests.
         Only on simulators.
         """
-        self.set_capability(REDUCE_MOTION, value)
+        pass

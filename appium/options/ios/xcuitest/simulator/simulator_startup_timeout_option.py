@@ -29,8 +29,7 @@ class SimulatorStartupTimeoutOption(SupportsCapabilities):
         """
         Simulator startup timeout.
         """
-        value = self.get_capability(SIMULATOR_STARTUP_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @simulator_startup_timeout.setter
     def simulator_startup_timeout(self, value: Union[timedelta, int]) -> None:
@@ -41,6 +40,4 @@ class SimulatorStartupTimeoutOption(SupportsCapabilities):
         or if other concurrent processes use much system resources
         during the boot up procedure.
         """
-        self.set_capability(
-            SIMULATOR_STARTUP_TIMEOUT, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value
-        )
+        pass

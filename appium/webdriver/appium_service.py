@@ -163,7 +163,7 @@ class AppiumService:
 
         :return: `True` if the service is running
         """
-        return self._process is not None and self._cmd is not None and self._process.poll() is None
+        pass
 
     @property
     def is_listening(self) -> bool:
@@ -176,22 +176,8 @@ class AppiumService:
         Returns:
             `True` if the service is running and listening on the given/default host/port
         """
-        if not self.is_running:
-            return False
+        pass
 
-        assert self._cmd
-        try:
-            return is_service_listening(
-                _make_server_url(self._cmd),
-                timeout=STATE_CHECK_INTERVAL_MS,
-                custom_validator=self._assert_is_running,
-            )
-        except AppiumStartupError:
-            return False
-
-    def _assert_is_running(self) -> None:
-        if not self.is_running:
-            raise AppiumStartupError()
 
 
 def is_service_listening(url: str, timeout: float = 5, custom_validator: Optional[Callable[[], None]] = None) -> bool:

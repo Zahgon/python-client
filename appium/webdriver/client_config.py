@@ -35,4 +35,4 @@ class AppiumClientConfig(ClientConfig):
     def direct_connection(self) -> bool:
         """Return if [directConnect](https://github.com/appium/python-client?tab=readme-ov-file#direct-connect-urls)
         is enabled."""
-        return self._direct_connection
+        pass

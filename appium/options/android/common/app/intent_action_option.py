@@ -29,7 +29,7 @@ class IntentActionOption(SupportsCapabilities):
         Intent action to be applied when
         starting the given appActivity by Activity Manager.
         """
-        return self.get_capability(INTENT_ACTION)
+        pass
 
     @intent_action.setter
     def intent_action(self, value: str) -> None:
@@ -37,4 +37,4 @@ class IntentActionOption(SupportsCapabilities):
         Set an optional intent action to be applied when
         starting the given appActivity by Activity Manager.
         """
-        self.set_capability(INTENT_ACTION, value)
+        pass

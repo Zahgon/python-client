@@ -28,7 +28,7 @@ class SkipDeviceInitializationOption(SupportsCapabilities):
         """
         Whether initial device startup checks by the server are disabled.
         """
-        return self.get_capability(SKIP_DEVICE_INITIALIZATION)
+        pass
 
     @skip_device_initialization.setter
     def skip_device_initialization(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class SkipDeviceInitializationOption(SupportsCapabilities):
         Settings app is installed) will be canceled on session creation.
         Could speed up the session creation if you know what you are doing. false by default
         """
-        self.set_capability(SKIP_DEVICE_INITIALIZATION, value)
+        pass

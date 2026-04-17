@@ -29,8 +29,7 @@ class CreateSessionTimeoutOption(SupportsCapabilities):
         """
         Timeout used to retry Appium Windows Driver session startup.
         """
-        value = self.get_capability(CREATE_SESSION_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @create_session_timeout.setter
     def create_session_timeout(self, value: Union[timedelta, int]) -> None:
@@ -40,6 +39,4 @@ class CreateSessionTimeoutOption(SupportsCapabilities):
         of UWP applications (aka Failed to locate opened application window
         with appId: TestCompany.my_app4!App, and processId: 8480).
         """
-        self.set_capability(
-            CREATE_SESSION_TIMEOUT, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value
-        )
+        pass

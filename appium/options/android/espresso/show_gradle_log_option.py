@@ -28,7 +28,7 @@ class ShowGradleLogOption(SupportsCapabilities):
         """
         Whether to include Gradle log to the regular server log.
         """
-        return self.get_capability(SHOW_GRADLE_LOG)
+        pass
 
     @show_gradle_log.setter
     def show_gradle_log(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class ShowGradleLogOption(SupportsCapabilities):
         Whether to include Gradle log to the regular server logs while
         building Espresso server. false by default.
         """
-        self.set_capability(SHOW_GRADLE_LOG, value)
+        pass

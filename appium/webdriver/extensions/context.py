@@ -31,7 +31,7 @@ class Context(CanExecuteCommands):
             :obj:`list` of :obj:`str`: The contexts within the current session
 
         """
-        return self.execute(Command.CONTEXTS)['value']
+        pass
 
     @property
     def current_context(self) -> str:
@@ -43,7 +43,7 @@ class Context(CanExecuteCommands):
         Return:
             str: The context of the current session
         """
-        return self.execute(Command.GET_CURRENT_CONTEXT)['value']
+        pass
 
     @property
     def context(self) -> str:
@@ -55,9 +55,5 @@ class Context(CanExecuteCommands):
         Return:
             str: The context of the current session
         """
-        return self.current_context
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(Command.CONTEXTS, 'GET', '/session/$sessionId/contexts')
-        self.command_executor.add_command(Command.GET_CURRENT_CONTEXT, 'GET', '/session/$sessionId/context')
-        self.command_executor.add_command(Command.SWITCH_TO_CONTEXT, 'POST', '/session/$sessionId/context')

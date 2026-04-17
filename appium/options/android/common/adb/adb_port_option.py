@@ -28,11 +28,11 @@ class AdbPortOption(SupportsCapabilities):
         """
         Number of the port where ADB is running.
         """
-        return self.get_capability(ADB_PORT)
+        pass
 
     @adb_port.setter
     def adb_port(self, value: int) -> None:
         """
         Set number of the port where ADB is running. 5037 by default
         """
-        self.set_capability(ADB_PORT, value)
+        pass

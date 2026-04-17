@@ -29,7 +29,7 @@ class FullContextListOption(SupportsCapabilities):
         Whether to return the detailed information on contexts for the get available
         context command.
         """
-        return self.get_capability(FULL_CONTEXT_LIST)
+        pass
 
     @full_context_list.setter
     def full_context_list(self, value: bool) -> None:
@@ -39,4 +39,4 @@ class FullContextListOption(SupportsCapabilities):
         contexts list would additionally include WebView title, full URL and the bundle
         identifier. Defaults to false.
         """
-        self.set_capability(FULL_CONTEXT_LIST, value)
+        pass

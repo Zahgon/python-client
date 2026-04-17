@@ -29,7 +29,7 @@ class AllowTestPackagesOption(SupportsCapabilities):
         Whether it is possible to use packages built with the test flag for
         the automated testing (literally adds -t flag to the adb install command).
         """
-        return self.get_capability(ALLOW_TEST_PACKAGES)
+        pass
 
     @allow_test_packages.setter
     def allow_test_packages(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class AllowTestPackagesOption(SupportsCapabilities):
         If set to true then it would be possible to use packages built with the test flag for
         the automated testing (literally adds -t flag to the adb install command). false by default.
         """
-        self.set_capability(ALLOW_TEST_PACKAGES, value)
+        pass

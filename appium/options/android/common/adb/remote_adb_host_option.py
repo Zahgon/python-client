@@ -28,7 +28,7 @@ class RemoteAdbHostOption(SupportsCapabilities):
         """
         Address of the host where ADB is running.
         """
-        return self.get_capability(REMOTE_ADB_HOST)
+        pass
 
     @remote_adb_host.setter
     def remote_adb_host(self, value: str) -> None:
@@ -36,4 +36,4 @@ class RemoteAdbHostOption(SupportsCapabilities):
         Address of the host where ADB is running (the value of -H ADB command line option).
         Localhost by default.
         """
-        self.set_capability(REMOTE_ADB_HOST, value)
+        pass

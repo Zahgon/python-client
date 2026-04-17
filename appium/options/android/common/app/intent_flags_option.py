@@ -29,7 +29,7 @@ class IntentFlagsOption(SupportsCapabilities):
         Intent flags to be applied when
         starting the given appActivity by Activity Manager.
         """
-        return self.get_capability(INTENT_FLAGS)
+        pass
 
     @intent_flags.setter
     def intent_flags(self, value: str) -> None:
@@ -37,4 +37,4 @@ class IntentFlagsOption(SupportsCapabilities):
         Set optional intent flags to be applied when
         starting the given appActivity by Activity Manager.
         """
-        self.set_capability(INTENT_FLAGS, value)
+        pass

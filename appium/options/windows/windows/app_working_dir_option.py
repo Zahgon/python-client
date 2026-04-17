@@ -29,7 +29,7 @@ class AppWorkingDirOption(SupportsCapabilities):
         Full path to the folder, which is going to be set as the working
         dir for the application under test.
         """
-        return self.get_capability(APP_WORKING_DIR)
+        pass
 
     @app_working_dir.setter
     def app_working_dir(self, value: str) -> None:
@@ -37,4 +37,4 @@ class AppWorkingDirOption(SupportsCapabilities):
         Set the full path to the folder, which is going to be set as the working
         dir for the application under test. This is only applicable for classic apps.
         """
-        self.set_capability(APP_WORKING_DIR, value)
+        pass

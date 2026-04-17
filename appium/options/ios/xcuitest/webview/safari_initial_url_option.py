@@ -28,11 +28,11 @@ class SafariInitialUrlOption(SupportsCapabilities):
         """
         The initial safari url.
         """
-        return self.get_capability(SAFARI_INITIAL_URL)
+        pass
 
     @safari_initial_url.setter
     def safari_initial_url(self, value: str) -> None:
         """
         Set initial safari url, default is a local welcome page.
         """
-        self.set_capability(SAFARI_INITIAL_URL, value)
+        pass

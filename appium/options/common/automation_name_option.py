@@ -28,11 +28,11 @@ class AutomationNameOption(SupportsCapabilities):
         """
         String representing the name of the automation engine name.
         """
-        return self.get_capability(AUTOMATION_NAME)
+        pass
 
     @automation_name.setter
     def automation_name(self, value: str) -> None:
         """
         Set the automation driver name to use for the given platform.
         """
-        self.set_capability(AUTOMATION_NAME, value)
+        pass

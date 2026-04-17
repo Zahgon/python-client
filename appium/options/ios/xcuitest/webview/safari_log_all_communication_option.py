@@ -28,7 +28,7 @@ class SafariLogAllCommunicationOption(SupportsCapabilities):
         """
         Whether to log of plists sent to and received from the Web Inspector.
         """
-        return self.get_capability(SAFARI_LOG_ALL_COMMUNICATION)
+        pass
 
     @safari_log_all_communication.setter
     def safari_log_all_communication(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class SafariLogAllCommunicationOption(SupportsCapabilities):
         For some operations this can be a lot of data, so it is recommended to
         be used only when necessary. Defaults to false.
         """
-        self.set_capability(SAFARI_LOG_ALL_COMMUNICATION, value)
+        pass

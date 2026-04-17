@@ -29,7 +29,7 @@ class SkipServerInstallationOption(SupportsCapabilities):
         Whether to skip the server components installation
         on the device under test and all the related checks.
         """
-        return self.get_capability(SKIP_SERVER_INSTALLATION)
+        pass
 
     @skip_server_installation.setter
     def skip_server_installation(self, value: bool) -> None:
@@ -41,4 +41,4 @@ class SkipServerInstallationOption(SupportsCapabilities):
         In case the server is not installed or an incorrect version of it is installed
         then you may get an unexpected error later.
         """
-        self.set_capability(SKIP_SERVER_INSTALLATION, value)
+        pass

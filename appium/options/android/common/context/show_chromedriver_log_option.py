@@ -28,7 +28,7 @@ class ShowChromedriverLogOption(SupportsCapabilities):
         """
         Whether to forward chromedriver output to the Appium server log.
         """
-        return self.get_capability(SHOW_CHROMEDRIVER_LOG)
+        pass
 
     @show_chromedriver_log.setter
     def show_chromedriver_log(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class ShowChromedriverLogOption(SupportsCapabilities):
         If set to true then all the output from chromedriver binary will be
         forwarded to the Appium server log. false by default.
         """
-        self.set_capability(SHOW_CHROMEDRIVER_LOG, value)
+        pass

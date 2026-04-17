@@ -28,7 +28,7 @@ class MockLocationAppOption(SupportsCapabilities):
         """
         Identifier of the app, which is used as a system mock location provider.
         """
-        return self.get_capability(MOCK_LOCATION_APP)
+        pass
 
     @mock_location_app.setter
     def mock_location_app(self, value: str) -> None:
@@ -39,4 +39,4 @@ class MockLocationAppOption(SupportsCapabilities):
         location provider setup procedure. Defaults to Appium Setting package
         identifier (io.appium.settings).
         """
-        self.set_capability(MOCK_LOCATION_APP, value)
+        pass

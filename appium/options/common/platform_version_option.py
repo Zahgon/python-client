@@ -29,7 +29,7 @@ class PlatformVersionOption(SupportsCapabilities):
         The platform version of an emulator or a real device.
         This capability is used for device autodetection if udid is not provided.
         """
-        return self.get_capability(PLATFORM_VERSION)
+        pass
 
     @platform_version.setter
     def platform_version(self, value: str) -> None:
@@ -37,4 +37,4 @@ class PlatformVersionOption(SupportsCapabilities):
         Set the platform version of an emulator or a real device.
         This capability is used for device autodetection if udid is not provided.
         """
-        self.set_capability(PLATFORM_VERSION, value)
+        pass

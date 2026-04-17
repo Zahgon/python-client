@@ -28,7 +28,7 @@ class LocalizableStringsDirOption(SupportsCapabilities):
         """
         Resource folder name where the main locale strings are stored.
         """
-        return self.get_capability(LOCALIZABLE_STRINGS_DIR)
+        pass
 
     @localizable_strings_dir.setter
     def localizable_strings_dir(self, value: str) -> None:
@@ -36,4 +36,4 @@ class LocalizableStringsDirOption(SupportsCapabilities):
         Where to look for localizable strings in the application bundle.
         Defaults to en.lproj.
         """
-        self.set_capability(LOCALIZABLE_STRINGS_DIR, value)
+        pass

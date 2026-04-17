@@ -28,7 +28,7 @@ class ChromedriverExecutableDirOption(SupportsCapabilities):
         """
         Full path to the folder where chromedriver executables are located.
         """
-        return self.get_capability(CHROMEDRIVER_EXECUTABLE_DIR)
+        pass
 
     @chromedriver_executable_dir.setter
     def chromedriver_executable_dir(self, value: str) -> None:
@@ -40,4 +40,4 @@ class ChromedriverExecutableDirOption(SupportsCapabilities):
         web/chromedriver.md#automatic-discovery-of-compatible-chromedriver)
         article for more details.
         """
-        self.set_capability(CHROMEDRIVER_EXECUTABLE_DIR, value)
+        pass

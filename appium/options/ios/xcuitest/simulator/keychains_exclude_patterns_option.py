@@ -28,7 +28,7 @@ class KeychainsExcludePatternsOption(SupportsCapabilities):
         """
         Keychains exclude patterns.
         """
-        return self.get_capability(KEYCHAINS_EXCLUDE_PATTERNS)
+        pass
 
     @keychains_exclude_patterns.setter
     def keychains_exclude_patterns(self, value: str) -> None:
@@ -41,4 +41,4 @@ class KeychainsExcludePatternsOption(SupportsCapabilities):
         feature has no effect on real devices. E.g. "*keychain*.db*"
         to exclude applications keychain from being restored
         """
-        self.set_capability(KEYCHAINS_EXCLUDE_PATTERNS, value)
+        pass

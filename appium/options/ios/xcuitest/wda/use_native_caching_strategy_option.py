@@ -28,7 +28,7 @@ class UseNativeCachingStrategyOption(SupportsCapabilities):
         """
         Whether to use the native caching strategy.
         """
-        return self.get_capability(USE_NATIVE_CACHING_STRATEGY)
+        pass
 
     @use_native_caching_strategy.setter
     def use_native_caching_strategy(self, value: bool) -> None:
@@ -38,4 +38,4 @@ class UseNativeCachingStrategyOption(SupportsCapabilities):
         change. By default, the native XCTest cache resolution is used (true)
         for all native locators (e.g. all, but xpath).
         """
-        self.set_capability(USE_NATIVE_CACHING_STRATEGY, value)
+        pass

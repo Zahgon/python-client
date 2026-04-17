@@ -35,12 +35,7 @@ class RemoteFS(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPresen
         Returns:
             The file's contents encoded as Base64.
         """
-        ext_name = 'mobile: pullFile'
-        try:
-            return self.assert_extension_exists(ext_name).execute_script(ext_name, {'remotePath': path})
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            return self.mark_extension_absence(ext_name).execute(Command.PULL_FILE, {'path': path})['value']
+        pass
 
     def pull_folder(self, path: str) -> str:
         """Retrieves a folder at `path`.
@@ -51,12 +46,7 @@ class RemoteFS(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPresen
         Returns:
             The folder's contents zipped and encoded as Base64.
         """
-        ext_name = 'mobile: pullFolder'
-        try:
-            return self.assert_extension_exists(ext_name).execute_script(ext_name, {'remotePath': path})
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            return self.mark_extension_absence(ext_name).execute(Command.PULL_FOLDER, {'path': path})['value']
+        pass
 
     def push_file(self, destination_path: str, base64data: Optional[str] = None, source_path: Optional[str] = None) -> Self:
         """Puts the data from the file at `source_path`, encoded as Base64, in the file specified as `path`.
@@ -72,39 +62,5 @@ class RemoteFS(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPresen
         Returns:
             Union['WebDriver', 'RemoteFS']: Self instance
         """
-        if source_path is None and base64data is None:
-            raise InvalidArgumentException('Must either pass base64 data or a local file path')
+        pass
 
-        if source_path is not None:
-            try:
-                with open(source_path, 'rb') as f:
-                    file_data = f.read()
-            except IOError as e:
-                message = f'source_path "{source_path}" could not be found. Are you sure the file exists?'
-                raise InvalidArgumentException(message) from e
-            base64data = base64.b64encode(file_data).decode('utf-8')
-
-        ext_name = 'mobile: pushFile'
-        try:
-            self.assert_extension_exists(ext_name).execute_script(
-                ext_name,
-                {
-                    'remotePath': destination_path,
-                    'payload': base64data,
-                },
-            )
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            self.mark_extension_absence(ext_name).execute(
-                Command.PUSH_FILE,
-                {
-                    'path': destination_path,
-                    'data': base64data,
-                },
-            )
-        return self
-
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(Command.PULL_FILE, 'POST', '/session/$sessionId/appium/device/pull_file')
-        self.command_executor.add_command(Command.PULL_FOLDER, 'POST', '/session/$sessionId/appium/device/pull_folder')
-        self.command_executor.add_command(Command.PUSH_FILE, 'POST', '/session/$sessionId/appium/device/push_file')

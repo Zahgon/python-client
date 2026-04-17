@@ -28,7 +28,7 @@ class ShutdownOtherSimulatorsOption(SupportsCapabilities):
         """
         Whether to shut down of other booted simulators except of the current one.
         """
-        return self.get_capability(SHUTDOWN_OTHER_SIMULATORS)
+        pass
 
     @shutdown_other_simulators.setter
     def shutdown_other_simulators(self, value: bool) -> None:
@@ -41,4 +41,4 @@ class ShutdownOtherSimulatorsOption(SupportsCapabilities):
         --relaxed-security command line argument is provided to the server.
         Defaults to false.
         """
-        self.set_capability(SHUTDOWN_OTHER_SIMULATORS, value)
+        pass

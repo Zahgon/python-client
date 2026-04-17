@@ -30,12 +30,11 @@ class AutoWebviewTimeoutOption(SupportsCapabilities):
         Set the maximum timeout to wait until a web view is
         available if autoWebview capability is set to true. 2000 ms by default.
         """
-        value = self.get_capability(AUTO_WEBVIEW_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @auto_webview_timeout.setter
     def auto_webview_timeout(self, value: Union[timedelta, int]) -> None:
         """
         Timeout to wait until a web view is available.
         """
-        self.set_capability(AUTO_WEBVIEW_TIMEOUT, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value)
+        pass

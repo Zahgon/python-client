@@ -28,7 +28,7 @@ class AllowDelayAdbOption(SupportsCapabilities):
         """
         Whether to prevent the emulator to use -delay-adb feature.
         """
-        return self.get_capability(ALLOW_DELAY_ADB)
+        pass
 
     @allow_delay_adb.setter
     def allow_delay_adb(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class AllowDelayAdbOption(SupportsCapabilities):
         Being set to false prevents emulator to use -delay-adb feature to detect its startup.
         See https://github.com/appium/appium/issues/14773 for more details.
         """
-        self.set_capability(ALLOW_DELAY_ADB, value)
+        pass

@@ -25,5 +25,3 @@ class AppiumLocatorConverter(LocatorConverter):
     to the Appium server as-is.
     """
 
-    def convert(self, by: str, value: str) -> Tuple[str, str]:
-        return (by, value)

@@ -29,11 +29,11 @@ class AppPathOption(SupportsCapabilities):
         """
         The path of the application to automate.
         """
-        return self.get_capability(APP_PATH)
+        pass
 
     @app_path.setter
     def app_path(self, value: Union[str, PathLike]) -> None:
         """
         Set the path of the application to automate.
         """
-        self.set_capability(APP_PATH, fspath(value))
+        pass

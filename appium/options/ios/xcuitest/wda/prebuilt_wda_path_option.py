@@ -28,7 +28,7 @@ class PrebuiltWdaPathOption(SupportsCapabilities):
         """
         The path to the prebuilt WebDriverAgent.
         """
-        return self.get_capability(PREBUILT_WDA_PATH)
+        pass
 
     @prebuilt_wda_path.setter
     def prebuilt_wda_path(self, value: str) -> None:
@@ -36,4 +36,4 @@ class PrebuiltWdaPathOption(SupportsCapabilities):
         The path to the prebuilt WebDriverAgent. This should be the path to the
         WebDriverAgent.xcarchive file or the WebDriverAgent.app bundle.
         """
-        self.set_capability(PREBUILT_WDA_PATH, value)
+        pass

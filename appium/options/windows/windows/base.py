@@ -55,7 +55,7 @@ class WindowsOptions(
         (actually, it will be Explorer). Either this capability or appTopLevelWindow must
         be provided on session startup.
         """
-        AppOption.app.fset(self, value)  # type: ignore
+        pass
 
     @PrerunOption.prerun.setter  # type: ignore
     def prerun(self, value: Dict[str, str]) -> None:
@@ -66,7 +66,7 @@ class WindowsOptions(
         See https://github.com/appium/appium-windows-driver#power-shell-commands-execution
         for more details.
         """
-        PrerunOption.prerun.fset(self, value)  # type: ignore
+        pass
 
     @PostrunOption.postrun.setter  # type: ignore
     def postrun(self, value: Dict[str, str]) -> None:
@@ -77,7 +77,7 @@ class WindowsOptions(
         See https://github.com/appium/appium-windows-driver#power-shell-commands-execution
         for more details.
         """
-        PostrunOption.postrun.fset(self, value)  # type: ignore
+        pass
 
     @SystemPortOption.system_port.setter  # type: ignore
     def system_port(self, value: int) -> None:
@@ -87,11 +87,5 @@ class WindowsOptions(
         number for a new Appium Windows Driver session is 4724. If this port is
         already busy then the next free port will be automatically selected.
         """
-        SystemPortOption.system_port.fset(self, value)  # type: ignore
+        pass
 
-    @property
-    def default_capabilities(self) -> Dict:
-        return {
-            AUTOMATION_NAME: 'Windows',
-            PLATFORM_NAME: 'Windows',
-        }

@@ -30,8 +30,7 @@ class ServerStartupTimeoutOption(SupportsCapabilities):
         Get the timeout to wait util the WebDriverAgentMac
         project is built and started.
         """
-        value_ms = self.get_capability(SERVER_STARTUP_TIMEOUT)
-        return None if value_ms is None else timedelta(milliseconds=value_ms)
+        pass
 
     @server_startup_timeout.setter
     def server_startup_timeout(self, value: Union[int, timedelta]) -> None:
@@ -39,6 +38,4 @@ class ServerStartupTimeoutOption(SupportsCapabilities):
         Set the timeout to wait util the WebDriverAgentMac
         project is built and started.
         """
-        self.set_capability(
-            SERVER_STARTUP_TIMEOUT, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value
-        )
+        pass

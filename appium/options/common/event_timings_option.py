@@ -29,7 +29,7 @@ class EventTimingsOption(SupportsCapabilities):
         Whether the driver should to report the timings
         for various Appium-internal events.
         """
-        return self.get_capability(EVENT_TIMINGS)
+        pass
 
     @event_timings.setter
     def event_timings(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class EventTimingsOption(SupportsCapabilities):
         Set whether the driver should to report the timings
         for various Appium-internal events.
         """
-        self.set_capability(EVENT_TIMINGS, value)
+        pass

@@ -60,7 +60,7 @@ class Mac2Options(
         https://github.com/appium/appium-mac2-driver#applescript-commands-execution
         for more details.
         """
-        PrerunOption.prerun.fset(self, value)  # type: ignore
+        pass
 
     @PostrunOption.postrun.setter  # type: ignore
     def postrun(self, value: Dict[str, str]) -> None:
@@ -71,7 +71,7 @@ class Mac2Options(
         https://github.com/appium/appium-mac2-driver#applescript-commands-execution
         for more details.
         """
-        PostrunOption.postrun.fset(self, value)  # type: ignore
+        pass
 
     @SystemPortOption.system_port.setter  # type: ignore
     def system_port(self, value: int) -> None:
@@ -79,7 +79,7 @@ class Mac2Options(
         Set the number of the port for the internal server to listen on.
         If not provided then Mac2Driver will use the default port 10100.
         """
-        SystemPortOption.system_port.fset(self, value)  # type: ignore
+        pass
 
     @SystemHostOption.system_host.setter  # type: ignore
     def system_host(self, value: str) -> None:
@@ -90,7 +90,7 @@ class Mac2Options(
         server listening on all available network interfaces.
         It is also possible to set the particular interface name, for example en1.
         """
-        SystemHostOption.system_host.fset(self, value)  # type: ignore
+        pass
 
     @BundleIdOption.bundle_id.setter  # type: ignore
     def bundle_id(self, value: str) -> None:
@@ -103,11 +103,5 @@ class Mac2Options(
         startup. If the application is already running then it will be moved to
         the foreground.
         """
-        BundleIdOption.bundle_id.fset(self, value)  # type: ignore
+        pass
 
-    @property
-    def default_capabilities(self) -> Dict:
-        return {
-            AUTOMATION_NAME: 'Mac2',
-            PLATFORM_NAME: 'Mac',
-        }

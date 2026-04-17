@@ -28,7 +28,7 @@ class CalendarAccessAuthorizedOption(SupportsCapabilities):
         """
         Whether to enable calendar access on IOS Simulator.
         """
-        return self.get_capability(CALENDAR_ACCESS_AUTHORIZED)
+        pass
 
     @calendar_access_authorized.setter
     def calendar_access_authorized(self, value: bool) -> None:
@@ -38,4 +38,4 @@ class CalendarAccessAuthorizedOption(SupportsCapabilities):
         on IOS Simulator with given bundleId. If not set, the calendar
         authorization status will not be set.
         """
-        self.set_capability(CALENDAR_ACCESS_AUTHORIZED, value)
+        pass

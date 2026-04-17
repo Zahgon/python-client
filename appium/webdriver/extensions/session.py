@@ -31,11 +31,5 @@ class Session(CanExecuteCommands):
         Returns:
             `dict`:  containing events timing information from the current session
         """
-        try:
-            return self.execute(Command.GET_SESSION)['value']['events']
-        except Exception as e:
-            logger.warning('Could not find events information in the session. Error: %s', e)
-            return {}
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(Command.GET_SESSION, 'GET', '/session/$sessionId')

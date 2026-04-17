@@ -28,7 +28,7 @@ class AppLocaleOption(SupportsCapabilities):
         """
         Locale for the app under test.
         """
-        return self.get_capability(APP_LOCALE)
+        pass
 
     @app_locale.setter
     def app_locale(self, value: Dict[str, str]) -> None:
@@ -41,4 +41,4 @@ class AppLocaleOption(SupportsCapabilities):
         list of available language abbreviations.
         Example: {"language": "zh", "country": "CN", "variant": "Hans"}.
         """
-        self.set_capability(APP_LOCALE, value)
+        pass

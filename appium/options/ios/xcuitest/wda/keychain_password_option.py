@@ -28,7 +28,7 @@ class KeychainPasswordOption(SupportsCapabilities):
         """
         Custom keychain password.
         """
-        return self.get_capability(KEYCHAIN_PASSWORD)
+        pass
 
     @keychain_password.setter
     def keychain_password(self, value: str) -> None:
@@ -36,4 +36,4 @@ class KeychainPasswordOption(SupportsCapabilities):
         Custom keychain password. The keychain is expected to
         contain the private development key.
         """
-        self.set_capability(KEYCHAIN_PASSWORD, value)
+        pass

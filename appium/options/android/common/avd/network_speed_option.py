@@ -28,7 +28,7 @@ class NetworkSpeedOption(SupportsCapabilities):
         """
         Desired network speed limit for the emulator.
         """
-        return self.get_capability(NETWORK_SPEED)
+        pass
 
     @network_speed.setter
     def network_speed(self, value: str) -> None:
@@ -38,4 +38,4 @@ class NetworkSpeedOption(SupportsCapabilities):
         the test starts. See emulator command line arguments description
         for more details.
         """
-        self.set_capability(NETWORK_SPEED, value)
+        pass

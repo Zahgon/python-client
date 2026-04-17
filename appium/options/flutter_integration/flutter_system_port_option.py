@@ -31,7 +31,7 @@ class FlutterSystemPortOption(SupportsCapabilities):
         Returns:
             int: returns the port number
         """
-        return self.get_capability(FLUTTER_SYSTEM_PORT)
+        pass
 
     @flutter_system_port.setter
     def flutter_system_port(self, value: int) -> None:
@@ -42,4 +42,4 @@ class FlutterSystemPortOption(SupportsCapabilities):
         Args:
             value (int): The port number to be used for the Flutter server.
         """
-        self.set_capability(FLUTTER_SYSTEM_PORT, value)
+        pass

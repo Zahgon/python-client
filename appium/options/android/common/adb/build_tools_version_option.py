@@ -28,7 +28,7 @@ class BuildToolsVersionOption(SupportsCapabilities):
         """
         Version of Android build tools to use.
         """
-        return self.get_capability(BUILD_TOOLS_VERSION)
+        pass
 
     @build_tools_version.setter
     def build_tools_version(self, value: str) -> None:
@@ -39,4 +39,4 @@ class BuildToolsVersionOption(SupportsCapabilities):
         (let say if there is a known bug in the most recent tools version).
         Example: 28.0.3
         """
-        self.set_capability(BUILD_TOOLS_VERSION, value)
+        pass

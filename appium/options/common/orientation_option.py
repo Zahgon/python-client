@@ -29,7 +29,7 @@ class OrientationOption(SupportsCapabilities):
         The orientation of the device's screen.
         Usually this is either 'PORTRAIT' or 'LANDSCAPE'.
         """
-        return self.get_capability(ORIENTATION)
+        pass
 
     @orientation.setter
     def orientation(self, value: str) -> None:
@@ -37,4 +37,4 @@ class OrientationOption(SupportsCapabilities):
         Set the orientation of the device's screen.
         Usually this is either 'PORTRAIT' or 'LANDSCAPE'.
         """
-        self.set_capability(ORIENTATION, value)
+        pass

@@ -28,7 +28,7 @@ class SafariIgnoreWebHostnamesOption(SupportsCapabilities):
         """
         Comma-separated list of host names to be ignored.
         """
-        return self.get_capability(SAFARI_IGNORE_WEB_HOSTNAMES)
+        pass
 
     @safari_ignore_web_hostnames.setter
     def safari_ignore_web_hostnames(self, value: str) -> None:
@@ -39,4 +39,4 @@ class SafariIgnoreWebHostnamesOption(SupportsCapabilities):
         and the test gets stuck. The common culprits are search engines (yahoo, bing,
         google) and about:blank.
         """
-        self.set_capability(SAFARI_IGNORE_WEB_HOSTNAMES, value)
+        pass

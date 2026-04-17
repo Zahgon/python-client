@@ -29,8 +29,7 @@ class WdaEventloopIdleDelayOption(SupportsCapabilities):
         """
         Event loop idle delay.
         """
-        value = self.get_capability(WDA_EVENTLOOP_IDLE_DELAY)
-        return None if value is None else timedelta(seconds=value)
+        pass
 
     @wda_eventloop_idle_delay.setter
     def wda_eventloop_idle_delay(self, value: Union[timedelta, float]) -> None:
@@ -43,4 +42,4 @@ class WdaEventloopIdleDelayOption(SupportsCapabilities):
         If you enable this capability start with at least 3 seconds and try increasing it,
         if creating the session still fails. Defaults to 0.
         """
-        self.set_capability(WDA_EVENTLOOP_IDLE_DELAY, value.total_seconds() if isinstance(value, timedelta) else value)
+        pass

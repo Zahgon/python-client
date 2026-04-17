@@ -31,7 +31,7 @@ class Settings(CanExecuteCommands):
         Returns:
             Current settings
         """
-        return self.execute(Command.GET_SETTINGS, {})['value']
+        pass
 
     def update_settings(self, settings: Dict[str, Any]) -> Self:
         """Set settings for the current session.
@@ -41,9 +41,5 @@ class Settings(CanExecuteCommands):
         Args:
             settings: dictionary of settings to apply to the current test session
         """
-        self.execute(Command.UPDATE_SETTINGS, {'settings': settings})
-        return self
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(Command.GET_SETTINGS, 'GET', '/session/$sessionId/appium/settings')
-        self.command_executor.add_command(Command.UPDATE_SETTINGS, 'POST', '/session/$sessionId/appium/settings')

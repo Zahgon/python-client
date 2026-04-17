@@ -28,7 +28,7 @@ class AdditionalWebviewBundleIdsOption(SupportsCapabilities):
         """
         Array of possible bundle identifiers for webviews.
         """
-        return self.get_capability(ADDITIONAL_WEBVIEW_BUNDLE_IDS)
+        pass
 
     @additional_webview_bundle_ids.setter
     def additional_webview_bundle_ids(self, value: List[str]) -> None:
@@ -37,4 +37,4 @@ class AdditionalWebviewBundleIdsOption(SupportsCapabilities):
         necessary if the Web Inspector is found to be returning a modified
         bundle identifier for the app. Defaults to [].
         """
-        self.set_capability(ADDITIONAL_WEBVIEW_BUNDLE_IDS, value)
+        pass

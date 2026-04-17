@@ -29,8 +29,7 @@ class WaitForAppLaunchOption(SupportsCapabilities):
         """
         Timeout used to retry Appium Windows Driver session startup.
         """
-        value = self.get_capability(WAIT_FOR_APP_LAUNCH)
-        return None if value is None else timedelta(seconds=value)
+        pass
 
     @wait_for_app_launch.setter
     def wait_for_app_launch(self, value: Union[timedelta, int]) -> None:
@@ -40,4 +39,4 @@ class WaitForAppLaunchOption(SupportsCapabilities):
         a defined amount of time after an app launch is initiated prior to
         attaching to the application session. The limit for this is 50 seconds.
         """
-        self.set_capability(WAIT_FOR_APP_LAUNCH, value.total_seconds() if isinstance(value, timedelta) else value)
+        pass

@@ -43,16 +43,5 @@ class SystemBars(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPres
                    - width
                    - height
         """
-        ext_name = 'mobile: getSystemBars'
-        try:
-            return self.assert_extension_exists(ext_name).execute_script(ext_name)
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            return self.mark_extension_absence(ext_name).execute(Command.GET_SYSTEM_BARS)['value']
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(
-            Command.GET_SYSTEM_BARS,
-            'GET',
-            '/session/$sessionId/appium/device/system_bars',
-        )

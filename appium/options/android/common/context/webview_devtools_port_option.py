@@ -28,7 +28,7 @@ class WebviewDevtoolsPortOption(SupportsCapabilities):
         """
         Local port number to use for devtools communication.
         """
-        return self.get_capability(WEBVIEW_DEVTOOLS_PORT)
+        pass
 
     @webview_devtools_port.setter
     def webview_devtools_port(self, value: int) -> None:
@@ -37,4 +37,4 @@ class WebviewDevtoolsPortOption(SupportsCapabilities):
         free port from 10900..11000 range is selected. Consider setting the custom
         value if you are running parallel tests.
         """
-        self.set_capability(WEBVIEW_DEVTOOLS_PORT, value)
+        pass

@@ -28,7 +28,7 @@ class KeychainPathOption(SupportsCapabilities):
         """
         Path to a custom keychain.
         """
-        return self.get_capability(KEYCHAIN_PATH)
+        pass
 
     @keychain_path.setter
     def keychain_path(self, value: str) -> None:
@@ -36,4 +36,4 @@ class KeychainPathOption(SupportsCapabilities):
         Path to a custom keychain, which
         contains the private development key.
         """
-        self.set_capability(KEYCHAIN_PATH, value)
+        pass

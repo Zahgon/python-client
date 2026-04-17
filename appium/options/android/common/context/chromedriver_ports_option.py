@@ -28,7 +28,7 @@ class ChromedriverPortsOption(SupportsCapabilities):
         """
         Local port numbers to use for Chromedriver communication.
         """
-        return self.get_capability(CHROMEDRIVER_PORTS)
+        pass
 
     @chromedriver_ports.setter
     def chromedriver_ports(self, value: List[int]) -> None:
@@ -36,4 +36,4 @@ class ChromedriverPortsOption(SupportsCapabilities):
         Array of possible port numbers to assign for Chromedriver communication.
         If none of the port in this array is free then a server error is thrown.
         """
-        self.set_capability(CHROMEDRIVER_PORTS, value)
+        pass

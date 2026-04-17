@@ -28,7 +28,7 @@ class SafariSocketChunkSizeOption(SupportsCapabilities):
         """
         Get the size of a single remote debugger socket chunk.
         """
-        return self.get_capability(SAFARI_SOCKET_CHUNK_SIZE)
+        pass
 
     @safari_socket_chunk_size.setter
     def safari_socket_chunk_size(self, value: int) -> None:
@@ -38,4 +38,4 @@ class SafariSocketChunkSizeOption(SupportsCapabilities):
         data to the Web Inspector, and breaking them into smaller parts can be
         helpful in those cases. Defaults to 16384 (also the maximum possible).
         """
-        self.set_capability(SAFARI_SOCKET_CHUNK_SIZE, value)
+        pass

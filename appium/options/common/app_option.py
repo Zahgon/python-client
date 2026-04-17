@@ -28,7 +28,7 @@ class AppOption(SupportsCapabilities):
         """
         String representing app location.
         """
-        return self.get_capability(APP)
+        pass
 
     @app.setter
     def app(self, value: str) -> None:
@@ -38,4 +38,4 @@ class AppOption(SupportsCapabilities):
         server is running.
         Could also be a valid URL.
         """
-        self.set_capability(APP, value)
+        pass

@@ -31,8 +31,7 @@ HEADER_IDEMOTENCY_KEY = 'X-Idempotency-Key'
 def _get_new_headers(key: str, headers: Dict[str, str]) -> Dict[str, str]:
     """Return a new dictionary of heafers without the given key.
     The key match is case-insensitive."""
-    lower_key = key.lower()
-    return {k: v for k, v in headers.items() if k.lower() != lower_key}
+    pass
 
 
 class AppiumConnection(RemoteConnection):
@@ -55,11 +54,4 @@ class AppiumConnection(RemoteConnection):
         """Override get_remote_connection_headers in RemoteConnection to control the extra headers.
         This method will be used in sending a request method in this class.
         """
-
-        if parsed_url.path.endswith('/session'):
-            # https://github.com/appium/appium-base-driver/pull/400
-            cls.extra_headers[HEADER_IDEMOTENCY_KEY] = str(uuid.uuid4())
-        else:
-            cls.extra_headers = _get_new_headers(HEADER_IDEMOTENCY_KEY, cls.extra_headers)
-
-        return {**super().get_remote_connection_headers(parsed_url, keep_alive=keep_alive), **cls.extra_headers}
+        pass

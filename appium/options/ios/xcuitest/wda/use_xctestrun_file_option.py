@@ -28,7 +28,7 @@ class UseXctestrunFileOption(SupportsCapabilities):
         """
         Whether to use of .xctestrun file to launch WDA.
         """
-        return self.get_capability(USE_XCTESTRUN_FILE)
+        pass
 
     @use_xctestrun_file.setter
     def use_xctestrun_file(self, value: bool) -> None:
@@ -46,4 +46,4 @@ class UseXctestrunFileOption(SupportsCapabilities):
         run on iOS 11.4 because of loading some module error on simulator. A module built with 11.4
         can work on iOS 12.2. (This is xcodebuild's expected behaviour.)
         """
-        self.set_capability(USE_XCTESTRUN_FILE, value)
+        pass

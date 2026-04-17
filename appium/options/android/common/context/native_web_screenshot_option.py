@@ -28,7 +28,7 @@ class NativeWebScreenshotOption(SupportsCapabilities):
         """
         Whether to use native screenshots in web view context.
         """
-        return self.get_capability(NATIVE_WEB_SCREENSHOT)
+        pass
 
     @native_web_screenshot.setter
     def native_web_screenshot(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class NativeWebScreenshotOption(SupportsCapabilities):
         rather than the one provided by chromedriver (false, the default value).
         Use it when you experience issues with the latter.
         """
-        self.set_capability(NATIVE_WEB_SCREENSHOT, value)
+        pass

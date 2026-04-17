@@ -40,10 +40,7 @@ class LogEvent(CanExecuteCommands):
                 | startTime: Received time
                 | endTime: Response time
         """
-        data = {}
-        if type is not None:
-            data['type'] = type
-        return self.execute(Command.GET_EVENTS, data)['value']
+        pass
 
     def log_event(self, vendor: str, event: str) -> Self:
         """Log a custom event on the Appium server.
@@ -59,10 +56,5 @@ class LogEvent(CanExecuteCommands):
         Returns:
             Union['WebDriver', 'LogEvent']: Self instance
         """
-        data = {'vendor': vendor, 'event': event}
-        self.execute(Command.LOG_EVENT, data)
-        return self
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(Command.GET_EVENTS, 'POST', '/session/$sessionId/appium/events')
-        self.command_executor.add_command(Command.LOG_EVENT, 'POST', '/session/$sessionId/appium/log_event')

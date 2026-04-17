@@ -29,7 +29,7 @@ class EnforceAppInstallOption(SupportsCapabilities):
         Whether the application under test is always reinstalled even
         if a newer version of it already exists on the device under test.
         """
-        return self.get_capability(ENFORCE_APP_INSTALL)
+        pass
 
     @enforce_app_install.setter
     def enforce_app_install(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class EnforceAppInstallOption(SupportsCapabilities):
         Allows setting whether the application under test is always reinstalled even
         if a newer version of it already exists on the device under test. false by default.
         """
-        self.set_capability(ENFORCE_APP_INSTALL, value)
+        pass

@@ -28,11 +28,11 @@ class CalendarFormatOption(SupportsCapabilities):
         """
         Calendar format for the iOS Simulator.
         """
-        return self.get_capability(CALENDAR_FORMAT)
+        pass
 
     @calendar_format.setter
     def calendar_format(self, value: str) -> None:
         """
         Set calendar format for the iOS Simulator.
         """
-        self.set_capability(CALENDAR_FORMAT, value)
+        pass

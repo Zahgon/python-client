@@ -28,7 +28,7 @@ class ChromeOptionsOption(SupportsCapabilities):
         """
         Chrome options.
         """
-        return self.get_capability(CHROME_OPTIONS)
+        pass
 
     @chrome_options.setter
     def chrome_options(self, value: Dict[str, Any]) -> None:
@@ -37,4 +37,4 @@ class ChromeOptionsOption(SupportsCapabilities):
         See https://chromedriver.chromium.org/capabilities for the list
         of available entries.
         """
-        self.set_capability(CHROME_OPTIONS, value)
+        pass

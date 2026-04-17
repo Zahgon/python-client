@@ -28,7 +28,7 @@ class ResetOnSessionStartOnlyOption(SupportsCapabilities):
         """
         Whether to perform Simulator reset on test session finish (false) or not (true).
         """
-        return self.get_capability(RESET_ON_SESSION_START_ONLY)
+        pass
 
     @reset_on_session_start_only.setter
     def reset_on_session_start_only(self, value: bool) -> None:
@@ -38,4 +38,4 @@ class ResetOnSessionStartOnlyOption(SupportsCapabilities):
         behaviour since version 1.6.4) may significantly shorten the duration of
         test session initialization.
         """
-        self.set_capability(RESET_ON_SESSION_START_ONLY, value)
+        pass

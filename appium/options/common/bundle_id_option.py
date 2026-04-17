@@ -28,11 +28,11 @@ class BundleIdOption(SupportsCapabilities):
         """
         The bundle identifier of the application to automate.
         """
-        return self.get_capability(BUNDLE_ID)
+        pass
 
     @bundle_id.setter
     def bundle_id(self, value: str) -> None:
         """
         Set the bundle identifier of the application to automate.
         """
-        self.set_capability(BUNDLE_ID, value)
+        pass

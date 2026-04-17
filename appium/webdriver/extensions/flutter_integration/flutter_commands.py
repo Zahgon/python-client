@@ -43,11 +43,7 @@ class FlutterCommand:
         Returns:
             None
         """
-        opts: Dict[str, Any] = self.__get_locator_options(locator)
-        if timeout is not None:
-            opts['timeout'] = timeout
-
-        self.execute_flutter_command('waitForVisible', opts)
+        pass
 
     def wait_for_invisible(
         self,
@@ -64,11 +60,7 @@ class FlutterCommand:
         Returns:
             None:
         """
-        opts: Dict[str, Any] = self.__get_locator_options(locator)
-        if timeout is not None:
-            opts['timeout'] = timeout
-
-        self.execute_flutter_command('waitForAbsent', opts)
+        pass
 
     # flutter action commands
 
@@ -83,10 +75,7 @@ class FlutterCommand:
         Returns:
             None:
         """
-        opts: Dict[str, Union[WebElement, Dict[str, int]]] = {'origin': element}
-        if offset is not None:
-            opts['offset'] = {'x': offset[0], 'y': offset[1]}
-        self.execute_flutter_command('doubleClick', opts)
+        pass
 
     def perform_long_press(self, element: WebElement, offset: Optional[Tuple[int, int]] = None) -> None:
         """
@@ -99,10 +88,7 @@ class FlutterCommand:
         Returns:
             None:
         """
-        opts: Dict[str, Union[WebElement, Dict[str, int]]] = {'origin': element}
-        if offset is not None:
-            opts['offset'] = {'x': offset[0], 'y': offset[1]}
-        self.execute_flutter_command('longPress', opts)
+        pass
 
     def perform_drag_and_drop(self, source: WebElement, target: WebElement) -> None:
         """
@@ -115,7 +101,7 @@ class FlutterCommand:
         Returns:
             None:
         """
-        self.execute_flutter_command('dragAndDrop', {'source': source, 'target': target})
+        pass
 
     def scroll_till_visible(
         self,
@@ -140,9 +126,7 @@ class FlutterCommand:
         Returns:
             Webelement: scrolled element
         """
-        opts['finder'] = scroll_to.to_dict()
-        opts['scrollDirection'] = scroll_direction.value
-        return self.execute_flutter_command('scrollTillVisible', opts)
+        pass
 
     def inject_mock_image(self, value: str) -> str:
         """
@@ -154,11 +138,7 @@ class FlutterCommand:
         Returns:
             str: Image ID of the injected image.
         """
-        if os.path.isfile(value):
-            base64_encoded_image = encode_file_to_base64(value)
-        else:
-            base64_encoded_image = value
-        return self.execute_flutter_command('injectImage', {'base64Image': base64_encoded_image})
+        pass
 
     def activate_injected_image(self, image_id: str) -> None:
         """
@@ -170,7 +150,7 @@ class FlutterCommand:
         Returns:
             None:
         """
-        self.execute_flutter_command('activateInjectedImage', {'imageId': image_id})
+        pass
 
     def get_render_tree(
         self,
@@ -265,15 +245,7 @@ class FlutterCommand:
                             }
                         ]
         """
-        opts = {}
-        if widget_type is not None:
-            opts['widgetType'] = widget_type
-        if key is not None:
-            opts['key'] = key
-        if text is not None:
-            opts['text'] = text
-
-        return self.execute_flutter_command('renderTree', opts)
+        pass
 
     def execute_flutter_command(self, scriptName: str, params: dict) -> Any:
         """
@@ -288,9 +260,5 @@ class FlutterCommand:
             Any: The result of the command execution. The return value depends on the
             specific Flutter command being executed.
         """
-        return self.driver.execute_script(f'flutter: {scriptName}', params)
+        pass
 
-    def __get_locator_options(self, locator: Union[WebElement, 'FlutterFinder']) -> Dict[str, Union[dict, WebElement]]:
-        if isinstance(locator, WebElement):
-            return {'element': locator}
-        return {'locator': locator.to_dict()}

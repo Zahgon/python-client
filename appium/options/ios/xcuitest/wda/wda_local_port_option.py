@@ -28,7 +28,7 @@ class WdaLocalPortOption(SupportsCapabilities):
         """
         Local port number where the WDA traffic is being forwarded.
         """
-        return self.get_capability(WDA_LOCAL_PORT)
+        pass
 
     @wda_local_port.setter
     def wda_local_port(self, value: int) -> None:
@@ -38,4 +38,4 @@ class WdaLocalPortOption(SupportsCapabilities):
         Default value is the same as the port number used by WDA on
         the device under test (8100).
         """
-        self.set_capability(WDA_LOCAL_PORT, value)
+        pass

@@ -28,7 +28,7 @@ class ActivityOptionsOption(SupportsCapabilities):
         """
         Activity options.
         """
-        return self.get_capability(ACTIVITY_OPTIONS)
+        pass
 
     @activity_options.setter
     def activity_options(self, value: Dict) -> None:
@@ -38,4 +38,4 @@ class ActivityOptionsOption(SupportsCapabilities):
         https://github.com/appium/appium-espresso-driver#activity-options
         for more details.
         """
-        self.set_capability(ACTIVITY_OPTIONS, value)
+        pass

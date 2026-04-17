@@ -29,7 +29,7 @@ class BootstrapRootOption(SupportsCapabilities):
         The full path to WebDriverAgentMac root folder where Xcode project
         of the server sources lives.
         """
-        return self.get_capability(BOOTSTRAP_ROOT)
+        pass
 
     @bootstrap_root.setter
     def bootstrap_root(self, value: str) -> None:
@@ -38,4 +38,4 @@ class BootstrapRootOption(SupportsCapabilities):
         of the server sources lives. By default, this project is located in
         the same folder where the corresponding driver Node.js module lives.
         """
-        self.set_capability(BOOTSTRAP_ROOT, value)
+        pass

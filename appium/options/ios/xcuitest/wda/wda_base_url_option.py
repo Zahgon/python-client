@@ -28,7 +28,7 @@ class WdaBaseUrlOption(SupportsCapabilities):
         """
         Prefix to build a custom WebDriverAgent URL.
         """
-        return self.get_capability(WDA_BASE_URL)
+        pass
 
     @wda_base_url.setter
     def wda_base_url(self, value: str) -> None:
@@ -38,4 +38,4 @@ class WdaBaseUrlOption(SupportsCapabilities):
         if the latter is set then it expects WebDriverAgent to be already
         listening and skips the building phase. Defaults to http://localhost.
         """
-        self.set_capability(WDA_BASE_URL, value)
+        pass

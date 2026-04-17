@@ -28,7 +28,7 @@ class UsePrebuiltWdaOption(SupportsCapabilities):
         """
         Whether to skip the build phase of running the WDA app.
         """
-        return self.get_capability(USE_PREBUILT_WDA)
+        pass
 
     @use_prebuilt_wda.setter
     def use_prebuilt_wda(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class UsePrebuiltWdaOption(SupportsCapabilities):
         Skips the build phase of running the WDA app. Building is then the responsibility
         of the user. Only works for Xcode 8+. Defaults to false.
         """
-        self.set_capability(USE_PREBUILT_WDA, value)
+        pass

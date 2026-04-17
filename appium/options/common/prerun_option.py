@@ -29,7 +29,7 @@ class PrerunOption(SupportsCapabilities):
         System script which is supposed to be executed before
         a driver session is initialised.
         """
-        return self.get_capability(PRERUN)
+        pass
 
     @prerun.setter
     def prerun(self, value: Dict[str, str]) -> None:
@@ -37,4 +37,4 @@ class PrerunOption(SupportsCapabilities):
         Set a system script which is supposed to be executed before
         a driver session is initialised.
         """
-        self.set_capability(PRERUN, value)
+        pass

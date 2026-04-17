@@ -28,7 +28,7 @@ class ExperimentalWebDriverOption(SupportsCapabilities):
         """
         Whether to enable experimental features and optimizations.
         """
-        return self.get_capability(EXPERIMENTAL_WEB_DRIVER)
+        pass
 
     @experimental_webdriver.setter
     def experimental_webdriver(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class ExperimentalWebDriverOption(SupportsCapabilities):
         Enables experimental features and optimizations. See Appium Windows
         Driver release notes for more details on this capability.
         """
-        self.set_capability(EXPERIMENTAL_WEB_DRIVER, value)
+        pass

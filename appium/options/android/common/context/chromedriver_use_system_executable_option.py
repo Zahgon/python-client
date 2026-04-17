@@ -28,7 +28,7 @@ class ChromedriverUseSystemExecutableOption(SupportsCapabilities):
         """
         Whether to use the system chromedriver.
         """
-        return self.get_capability(CHROMEDRIVER_USE_SYSTEM_EXECUTABLE)
+        pass
 
     @chromedriver_use_system_executable.setter
     def chromedriver_use_system_executable(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class ChromedriverUseSystemExecutableOption(SupportsCapabilities):
         downloaded by Appium automatically upon installation. This driver might not
         be compatible with the destination browser or a web view. false by default.
         """
-        self.set_capability(CHROMEDRIVER_USE_SYSTEM_EXECUTABLE, value)
+        pass

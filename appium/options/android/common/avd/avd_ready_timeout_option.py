@@ -29,8 +29,7 @@ class AvdReadyTimeoutOption(SupportsCapabilities):
         """
         Timeout to wait until Android Emulator is fully booted and is ready for usage.
         """
-        value = self.get_capability(AVD_READY_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @avd_ready_timeout.setter
     def avd_ready_timeout(self, value: Union[timedelta, int]) -> None:
@@ -38,4 +37,4 @@ class AvdReadyTimeoutOption(SupportsCapabilities):
         Maximum timeout to wait until Android Emulator is fully booted and is ready for usage.
         60000 ms by default
         """
-        self.set_capability(AVD_READY_TIMEOUT, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value)
+        pass

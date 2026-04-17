@@ -28,7 +28,7 @@ class UseKeystoreOption(SupportsCapabilities):
         """
         Whether to use custom keystore.
         """
-        return self.get_capability(USE_KEYSTORE)
+        pass
 
     @use_keystore.setter
     def use_keystore(self, value: bool) -> None:
@@ -39,4 +39,4 @@ class UseKeystoreOption(SupportsCapabilities):
         This option is used in combination with keystorePath, keystorePassword,
         keyAlias and keyPassword options.
         """
-        self.set_capability(USE_KEYSTORE, value)
+        pass

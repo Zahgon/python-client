@@ -28,7 +28,7 @@ class UsePreinstalledWdaOption(SupportsCapabilities):
         """
         Whether to use a preinstalled WebDriverAgent.
         """
-        return self.get_capability(USE_PREINSTALLED_WDA)
+        pass
 
     @use_preinstalled_wda.setter
     def use_preinstalled_wda(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class UsePreinstalledWdaOption(SupportsCapabilities):
         build and install the WebDriverAgent, but will use an existing one.
         Defaults to false.
         """
-        self.set_capability(USE_PREINSTALLED_WDA, value)
+        pass

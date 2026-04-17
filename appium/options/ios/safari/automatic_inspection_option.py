@@ -28,7 +28,7 @@ class AutomaticInspectionOption(SupportsCapabilities):
         """
         Whether to use automatic inspection.
         """
-        return self.get_capability(AUTOMATIC_INSPECTION)
+        pass
 
     @automatic_inspection.setter
     def automatic_inspection(self, value: bool) -> None:
@@ -38,4 +38,4 @@ class AutomaticInspectionOption(SupportsCapabilities):
         To pause the test's execution in JavaScript and bring up Web Inspector's
         Debugger tab, you can simply evaluate a debugger statement in the test page.
         """
-        self.set_capability(AUTOMATIC_INSPECTION, value)
+        pass

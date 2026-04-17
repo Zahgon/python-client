@@ -28,11 +28,11 @@ class EnablePerformanceLoggingOption(SupportsCapabilities):
         """
         Whether to enable additional performance logging.
         """
-        return self.get_capability(ENABLE_PERFORMANCE_LOGGING)
+        pass
 
     @enable_performance_logging.setter
     def enable_performance_logging(self, value: bool) -> None:
         """
         Set whether to enable additional performance logging.
         """
-        self.set_capability(ENABLE_PERFORMANCE_LOGGING, value)
+        pass

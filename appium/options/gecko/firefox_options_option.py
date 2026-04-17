@@ -28,11 +28,11 @@ class FirefoxOptionsOption(SupportsCapabilities):
         """
         Firefox options mapping.
         """
-        return self.get_capability(FIREFOX_OPTIONS)
+        pass
 
     @firefox_options.setter
     def firefox_options(self, value: Dict[str, Any]) -> None:
         """
         See https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions
         """
-        self.set_capability(FIREFOX_OPTIONS, value)
+        pass

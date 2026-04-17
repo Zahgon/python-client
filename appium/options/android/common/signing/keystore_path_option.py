@@ -28,7 +28,7 @@ class KeystorePathOption(SupportsCapabilities):
         """
         The path to keystore.
         """
-        return self.get_capability(KEYSTORE_PATH)
+        pass
 
     @keystore_path.setter
     def keystore_path(self, value: str) -> None:
@@ -37,4 +37,4 @@ class KeystorePathOption(SupportsCapabilities):
         This option is used in combination with useKeystore, keystorePath,
         keystorePassword, keyAlias and keyPassword options. Unset by default
         """
-        self.set_capability(KEYSTORE_PATH, value)
+        pass

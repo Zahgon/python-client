@@ -29,8 +29,7 @@ class Uiautomator2ServerLaunchTimeoutOption(SupportsCapabilities):
         """
         Maximum timeout to wait until UiAutomator2 server is listening on the device.
         """
-        value = self.get_capability(UIAUTOMATOR2_SERVER_LAUNCH_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @uiautomator2_server_launch_timeout.setter
     def uiautomator2_server_launch_timeout(self, value: Union[timedelta, int]) -> None:
@@ -38,7 +37,4 @@ class Uiautomator2ServerLaunchTimeoutOption(SupportsCapabilities):
         Set the maximum timeout to wait util UiAutomator2Server is listening on
         the device. 30000 ms by default
         """
-        self.set_capability(
-            UIAUTOMATOR2_SERVER_LAUNCH_TIMEOUT,
-            int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value,
-        )
+        pass

@@ -28,7 +28,7 @@ class SimulatorWindowCenterOption(SupportsCapabilities):
         """
         Simulator window center coordinates.
         """
-        return self.get_capability(SIMULATOR_WINDOW_CENTER)
+        pass
 
     @simulator_window_center.setter
     def simulator_window_center(self, value: str) -> None:
@@ -38,4 +38,4 @@ class SimulatorWindowCenterOption(SupportsCapabilities):
         window has not been opened yet for the current session before it started.
         e.g. "{-100.0,100.0}" or "{500,500}", spaces are not allowed
         """
-        self.set_capability(SIMULATOR_WINDOW_CENTER, value)
+        pass

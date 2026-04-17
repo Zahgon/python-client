@@ -28,7 +28,7 @@ class XcodeOrgIdOption(SupportsCapabilities):
         """
         Signing certificate organization id for WebDriverAgent compilation.
         """
-        return self.get_capability(XCODE_ORG_ID)
+        pass
 
     @xcode_org_id.setter
     def xcode_org_id(self, value: str) -> None:
@@ -36,4 +36,4 @@ class XcodeOrgIdOption(SupportsCapabilities):
         Provides a signing certificate organization id for WebDriverAgent compilation.
         If signing id is not provided then it defaults to "iPhone Developer"
         """
-        self.set_capability(XCODE_ORG_ID, value)
+        pass

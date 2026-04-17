@@ -28,11 +28,11 @@ class AvdArgsOption(SupportsCapabilities):
         """
         Emulator command line arguments.
         """
-        return self.get_capability(AVD_ARGS)
+        pass
 
     @avd_args.setter
     def avd_args(self, value: str) -> None:
         """
         Set emulator command line arguments.
         """
-        self.set_capability(AVD_ARGS, value)
+        pass

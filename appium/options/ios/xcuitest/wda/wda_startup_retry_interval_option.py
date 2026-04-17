@@ -29,8 +29,7 @@ class WdaStartupRetryIntervalOption(SupportsCapabilities):
         """
         Interval to wait between tries to build and launch WebDriverAgent.
         """
-        value = self.get_capability(WDA_STARTUP_RETRY_INTERVAL)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @wda_startup_retry_interval.setter
     def wda_startup_retry_interval(self, value: Union[timedelta, int]) -> None:
@@ -38,6 +37,4 @@ class WdaStartupRetryIntervalOption(SupportsCapabilities):
         Time interval to wait between tries to build and launch WebDriverAgent.
         Defaults to 10000ms.
         """
-        self.set_capability(
-            WDA_STARTUP_RETRY_INTERVAL, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value
-        )
+        pass

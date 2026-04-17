@@ -28,7 +28,7 @@ class KeystorePasswordOption(SupportsCapabilities):
         """
         Keystore password.
         """
-        return self.get_capability(KEYSTORE_PASSWORD)
+        pass
 
     @keystore_password.setter
     def keystore_password(self, value: str) -> None:
@@ -37,4 +37,4 @@ class KeystorePasswordOption(SupportsCapabilities):
         This option is used in combination with useKeystore, keystorePath,
         keystorePassword, keyAlias and keyPassword options. Unset by default
         """
-        self.set_capability(KEYSTORE_PASSWORD, value)
+        pass

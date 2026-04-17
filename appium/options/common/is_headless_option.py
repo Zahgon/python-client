@@ -28,7 +28,7 @@ class IsHeadlessOption(SupportsCapabilities):
         """
         Whether the driver should start emulator/simulator in headless mode.
         """
-        return self.get_capability(IS_HEADLESS)
+        pass
 
     @is_headless.setter
     def is_headless(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class IsHeadlessOption(SupportsCapabilities):
         Set emulator/simulator to start in headless mode (e.g. no UI is shown).
         It is only applied if the emulator is not running before the test starts.
         """
-        self.set_capability(IS_HEADLESS, value)
+        pass

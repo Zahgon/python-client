@@ -29,8 +29,7 @@ class UnlockSuccessTimeoutOption(SupportsCapabilities):
         """
         Timeout to wait until the device is unlocked.
         """
-        value = self.get_capability(UNLOCK_SUCCESS_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @unlock_success_timeout.setter
     def unlock_success_timeout(self, value: Union[timedelta, int]) -> None:
@@ -38,6 +37,4 @@ class UnlockSuccessTimeoutOption(SupportsCapabilities):
         Maximum timeout to wait until the device is unlocked.
         2000 ms by default.
         """
-        self.set_capability(
-            UNLOCK_SUCCESS_TIMEOUT, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value
-        )
+        pass

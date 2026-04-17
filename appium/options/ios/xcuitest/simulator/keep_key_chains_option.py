@@ -28,7 +28,7 @@ class KeepKeyChainsOption(SupportsCapabilities):
         """
         Whether to preserve Simulator keychains after full reset.
         """
-        return self.get_capability(KEEP_KEY_CHAINS)
+        pass
 
     @keep_key_chains.setter
     def keep_key_chains(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class KeepKeyChainsOption(SupportsCapabilities):
         Set the capability to true in order to preserve Simulator keychains folder after
         full reset. This feature has no effect on real devices. Defaults to false.
         """
-        self.set_capability(KEEP_KEY_CHAINS, value)
+        pass

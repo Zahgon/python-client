@@ -28,7 +28,7 @@ class IgnoreHiddenApiPolicyErrorOption(SupportsCapabilities):
         """
         Whether to ignore a failure while changing hidden API access policies.
         """
-        return self.get_capability(IGNORE_HIDDEN_API_POLICY_ERROR)
+        pass
 
     @ignore_hidden_api_policy_error.setter
     def ignore_hidden_api_policy_error(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class IgnoreHiddenApiPolicyErrorOption(SupportsCapabilities):
         Could be useful on some devices, where access to these policies has been locked by its vendor.
         false by default.
         """
-        self.set_capability(IGNORE_HIDDEN_API_POLICY_ERROR, value)
+        pass

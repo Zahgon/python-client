@@ -28,7 +28,7 @@ class MjpegServerPortOption(SupportsCapabilities):
         """
         Number of the port UiAutomator2 server starts the MJPEG server on.
         """
-        return self.get_capability(MJPEG_SERVER_PORT)
+        pass
 
     @mjpeg_server_port.setter
     def mjpeg_server_port(self, value: int) -> None:
@@ -38,4 +38,4 @@ class MjpegServerPortOption(SupportsCapabilities):
         device does not get exposed to a local port (e.g. no adb port forwarding
         is happening).
         """
-        self.set_capability(MJPEG_SERVER_PORT, value)
+        pass

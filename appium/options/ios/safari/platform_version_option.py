@@ -28,7 +28,7 @@ class PlatformVersionOption(SupportsCapabilities):
         """
         String representing the platform version.
         """
-        return self.get_capability(PLATFORM_VERSION)
+        pass
 
     @platform_version.setter
     def platform_version(self, value: str) -> None:
@@ -38,4 +38,4 @@ class PlatformVersionOption(SupportsCapabilities):
         numbers are prefix-matched. For example, if the value of safari:platformVersion
         is '12', this will allow hosts with an OS version of '12.0' or '12.1' but not '10.12'.
         """
-        self.set_capability(PLATFORM_VERSION, value)
+        pass

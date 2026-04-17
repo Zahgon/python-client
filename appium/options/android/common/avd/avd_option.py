@@ -28,7 +28,7 @@ class AvdOption(SupportsCapabilities):
         """
         Name of Android emulator to run the test on.
         """
-        return self.get_capability(AVD)
+        pass
 
     @avd.setter
     def avd(self, value: str) -> None:
@@ -38,4 +38,4 @@ class AvdOption(SupportsCapabilities):
         avdmanager list avd command. If the emulator with the given name
         is not running then it is going to be started before a test.
         """
-        self.set_capability(AVD, value)
+        pass

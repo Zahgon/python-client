@@ -28,7 +28,7 @@ class SafariGarbageCollectOption(SupportsCapabilities):
         """
         Whether to turn on garbage collection when executing scripts on Safari.
         """
-        return self.get_capability(SAFARI_GARBAGE_COLLECT)
+        pass
 
     @safari_garbage_collect.setter
     def safari_garbage_collect(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class SafariGarbageCollectOption(SupportsCapabilities):
         Turns on/off Web Inspector garbage collection when executing scripts on Safari.
         Turning on may improve performance. Defaults to false.
         """
-        self.set_capability(SAFARI_GARBAGE_COLLECT, value)
+        pass

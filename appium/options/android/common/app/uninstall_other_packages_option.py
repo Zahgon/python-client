@@ -28,7 +28,7 @@ class UninstallOtherPackagesOption(SupportsCapabilities):
         """
         Identifiers of packages to be uninstalled from the device before a test starts.
         """
-        return self.get_capability(UNINSTALL_OTHER_PACKAGES)
+        pass
 
     @uninstall_other_packages.setter
     def uninstall_other_packages(self, value: str) -> None:
@@ -36,4 +36,4 @@ class UninstallOtherPackagesOption(SupportsCapabilities):
         Allows to set one or more comma-separated package
         identifiers to be uninstalled from the device before a test starts.
         """
-        self.set_capability(UNINSTALL_OTHER_PACKAGES, value)
+        pass

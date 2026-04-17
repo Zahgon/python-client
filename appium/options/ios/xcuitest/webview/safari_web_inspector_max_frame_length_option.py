@@ -28,7 +28,7 @@ class SafariWebInspectorMaxFrameLengthOption(SupportsCapabilities):
         """
         Maximum size in bytes of a single data frame for the Web Inspector.
         """
-        return self.get_capability(SAFARI_WEB_INSPECTOR_MAX_FRAME_LENGTH)
+        pass
 
     @safari_web_inspector_max_frame_length.setter
     def safari_web_inspector_max_frame_length(self, value: int) -> None:
@@ -38,4 +38,4 @@ class SafariWebInspectorMaxFrameLengthOption(SupportsCapabilities):
         Too low values could introduce possible buffer overflow exceptions.
         Defaults to 20MiB (20*1024*1024).
         """
-        self.set_capability(SAFARI_WEB_INSPECTOR_MAX_FRAME_LENGTH, value)
+        pass

@@ -28,7 +28,7 @@ class AndroidStorageOption(SupportsCapabilities):
         """
         The currently set storage type.
         """
-        return self.get_capability(ANDROID_STORAGE)
+        pass
 
     @android_storage.setter
     def android_storage(self, value: str) -> None:
@@ -36,4 +36,4 @@ class AndroidStorageOption(SupportsCapabilities):
         See https://firefox-source-docs.mozilla.org/testing/geckodriver
         /Flags.html#code-android-storage-var-android-storage-var-code
         """
-        self.set_capability(ANDROID_STORAGE, value)
+        pass

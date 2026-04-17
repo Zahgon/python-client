@@ -28,7 +28,7 @@ class DeviceTypeOption(SupportsCapabilities):
         """
         String representing the type of the device.
         """
-        return self.get_capability(DEVICE_TYPE)
+        pass
 
     @device_type.setter
     def device_type(self, value: str) -> None:
@@ -38,4 +38,4 @@ class DeviceTypeOption(SupportsCapabilities):
         safaridriver will only create a session using an iPad device or iPad simulator.
         Values of safari:deviceType are compared case-insensitively.
         """
-        self.set_capability(DEVICE_TYPE, value)
+        pass

@@ -28,7 +28,7 @@ class WdaStartupRetriesOption(SupportsCapabilities):
         """
         Number of retries before to fail WDA deployment.
         """
-        return self.get_capability(WDA_STARTUP_RETRIES)
+        pass
 
     @wda_startup_retries.setter
     def wda_startup_retries(self, value: int) -> None:
@@ -36,4 +36,4 @@ class WdaStartupRetriesOption(SupportsCapabilities):
         Number of times to try to build and launch WebDriverAgent onto the device.
         Defaults to 2.
         """
-        self.set_capability(WDA_STARTUP_RETRIES, value)
+        pass

@@ -42,10 +42,5 @@ class GeckoOptions(
         for each session. If not provided then the driver will try to detect
         it automatically.
         """
-        SystemPortOption.system_port.fset(self, value)  # type: ignore
+        pass
 
-    @property
-    def default_capabilities(self) -> Dict:
-        return {
-            AUTOMATION_NAME: 'Gecko',
-        }

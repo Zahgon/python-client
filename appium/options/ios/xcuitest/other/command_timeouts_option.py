@@ -29,12 +29,7 @@ class CommandTimeoutsOption(SupportsCapabilities):
         """
         Custom timeout(s) for WDA backend commands execution.
         """
-        value = self.get_capability(COMMAND_TIMEOUTS)
-        if value is None:
-            return None
-        if isinstance(value, dict):
-            return {k: timedelta(milliseconds=v) for k, v in value.items()}
-        return timedelta(milliseconds=int(value))
+        pass
 
     @command_timeouts.setter
     def command_timeouts(self, value: Union[Dict[str, timedelta], timedelta, int]) -> None:
@@ -49,9 +44,4 @@ class CommandTimeoutsOption(SupportsCapabilities):
         The magic 'default' key allows to provide the timeout for all other commands that
         were not explicitly mentioned as dictionary keys
         """
-        if isinstance(value, dict):
-            self.set_capability(COMMAND_TIMEOUTS, {k: int(v.total_seconds() * 1000) for k, v in value.items()})
-        elif isinstance(value, timedelta):
-            self.set_capability(COMMAND_TIMEOUTS, f'{int(value.total_seconds() * 1000)}')
-        else:
-            self.set_capability(COMMAND_TIMEOUTS, value)
+        pass

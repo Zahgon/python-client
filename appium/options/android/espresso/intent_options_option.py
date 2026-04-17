@@ -28,7 +28,7 @@ class IntentOptionsOption(SupportsCapabilities):
         """
         Intent options.
         """
-        return self.get_capability(INTENT_OPTIONS)
+        pass
 
     @intent_options.setter
     def intent_options(self, value: Dict[str, Any]) -> None:
@@ -38,4 +38,4 @@ class IntentOptionsOption(SupportsCapabilities):
         https://github.com/appium/appium-espresso-driver#intent-options
         for more details.
         """
-        self.set_capability(INTENT_OPTIONS, value)
+        pass

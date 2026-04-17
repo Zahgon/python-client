@@ -28,7 +28,7 @@ class DerivedDataPathOption(SupportsCapabilities):
         """
         Path to the derived data WDA folder.
         """
-        return self.get_capability(DERIVED_DATA_PATH)
+        pass
 
     @derived_data_path.setter
     def derived_data_path(self, value: str) -> None:
@@ -38,4 +38,4 @@ class DerivedDataPathOption(SupportsCapabilities):
         taken from preferences.
         It also makes sense to choose different folders for parallel WDA sessions.
         """
-        self.set_capability(DERIVED_DATA_PATH, value)
+        pass

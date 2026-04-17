@@ -28,7 +28,7 @@ class UpdatedWdaBundleIdOption(SupportsCapabilities):
         """
         WDA bundle identifier.
         """
-        return self.get_capability(UPDATED_WDA_BUNDLE_ID)
+        pass
 
     @updated_wda_bundle_id.setter
     def updated_wda_bundle_id(self, value: str) -> None:
@@ -36,4 +36,4 @@ class UpdatedWdaBundleIdOption(SupportsCapabilities):
         Bundle id to update WDA to before building and launching on real devices.
         This bundle id must be associated with a valid provisioning profile.
         """
-        self.set_capability(UPDATED_WDA_BUNDLE_ID, value)
+        pass

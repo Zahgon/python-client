@@ -28,7 +28,7 @@ class ForceSimulatorSoftwareKeyboardPresenceOption(SupportsCapabilities):
         """
         Whether to enforce software keyboard presence.
         """
-        return self.get_capability(FORCE_SIMULATOR_SOFTWARE_KEYBOARD_PRESENCE)
+        pass
 
     @force_simulator_software_keyboard_presence.setter
     def force_simulator_software_keyboard_presence(self, value: bool) -> None:
@@ -42,4 +42,4 @@ class ForceSimulatorSoftwareKeyboardPresenceOption(SupportsCapabilities):
         the current Simulator keyboard preferences. This option has priority
         over connectHardwareKeyboard.
         """
-        self.set_capability(FORCE_SIMULATOR_SOFTWARE_KEYBOARD_PRESENCE, value)
+        pass

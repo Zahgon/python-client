@@ -29,7 +29,7 @@ class IntentCategoryOption(SupportsCapabilities):
         Intent category to be applied when
         starting the given appActivity by Activity Manager.
         """
-        return self.get_capability(INTENT_CATEGORY)
+        pass
 
     @intent_category.setter
     def intent_category(self, value: str) -> None:
@@ -37,4 +37,4 @@ class IntentCategoryOption(SupportsCapabilities):
         Set an optional intent category to be applied when
         starting the given appActivity by Activity Manager.
         """
-        self.set_capability(INTENT_CATEGORY, value)
+        pass

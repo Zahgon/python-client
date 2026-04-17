@@ -28,7 +28,7 @@ class LaunchWithIdbOption(SupportsCapabilities):
         """
         Whether to launch WebDriverAgentRunner with idb instead of xcodebuild.
         """
-        return self.get_capability(LAUNCH_WITH_IDB)
+        pass
 
     @launch_with_idb.setter
     def launch_with_idb(self, value: bool) -> None:
@@ -39,4 +39,4 @@ class LaunchWithIdbOption(SupportsCapabilities):
         the idb repository for more details on possible compatibility issues.
         Defaults to false.
         """
-        self.set_capability(LAUNCH_WITH_IDB, value)
+        pass

@@ -30,7 +30,7 @@ class FlutterEnableMockCameraOption(SupportsCapabilities):
         Returns:
             bool: A boolean indicating whether the mock camera is enabled (True) or disabled (False).
         """
-        return self.get_capability(FLUTTER_ENABLE_MOCK_CAMERA)
+        pass
 
     @flutter_enable_mock_camera.setter
     def flutter_enable_mock_camera(self, value: bool) -> None:
@@ -41,4 +41,4 @@ class FlutterEnableMockCameraOption(SupportsCapabilities):
         Args:
             value (bool): A boolean value indicating whether to enable (True) or disable (False) the mock camera.
         """
-        self.set_capability(FLUTTER_ENABLE_MOCK_CAMERA, value)
+        pass

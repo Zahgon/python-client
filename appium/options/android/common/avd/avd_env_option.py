@@ -28,11 +28,11 @@ class AvdEnvOption(SupportsCapabilities):
         """
         Mapping of emulator environment variables.
         """
-        return self.get_capability(AVD_ENV)
+        pass
 
     @avd_env.setter
     def avd_env(self, value: Dict[str, str]) -> None:
         """
         Set the mapping of emulator environment variables.
         """
-        self.set_capability(AVD_ENV, value)
+        pass

@@ -28,7 +28,7 @@ class SimulatorDevicesSetPathOption(SupportsCapabilities):
         """
         Alternative path to the simulator devices set.
         """
-        return self.get_capability(SIMULATOR_DEVICES_SET_PATH)
+        pass
 
     @simulator_devices_set_path.setter
     def simulator_devices_set_path(self, value: str) -> None:
@@ -38,4 +38,4 @@ class SimulatorDevicesSetPathOption(SupportsCapabilities):
         feature could be useful if you, for example, would like to save disk space
         on the main system volume.
         """
-        self.set_capability(SIMULATOR_DEVICES_SET_PATH, value)
+        pass

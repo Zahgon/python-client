@@ -28,7 +28,7 @@ class ScreenshotQualityOption(SupportsCapabilities):
         """
         Screenshot quality value.
         """
-        return self.get_capability(SCREENSHOT_QUALITY)
+        pass
 
     @screenshot_quality.setter
     def screenshot_quality(self, value: int) -> None:
@@ -39,4 +39,4 @@ class ScreenshotQualityOption(SupportsCapabilities):
         command. 0 might cause OutOfMemory crash on high-resolution
         devices like iPad Pro.
         """
-        self.set_capability(SCREENSHOT_QUALITY, value)
+        pass

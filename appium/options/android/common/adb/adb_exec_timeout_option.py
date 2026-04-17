@@ -29,8 +29,7 @@ class AdbExecTimeoutOption(SupportsCapabilities):
         """
         Maximum time to wait until single ADB command is executed.
         """
-        value = self.get_capability(ADB_EXEC_TIMEOUT)
-        return None if value is None else timedelta(milliseconds=value)
+        pass
 
     @adb_exec_timeout.setter
     def adb_exec_timeout(self, value: Union[timedelta, int]) -> None:
@@ -38,4 +37,4 @@ class AdbExecTimeoutOption(SupportsCapabilities):
         Maximum time to wait until single ADB command is executed.
         20000 ms by default.
         """
-        self.set_capability(ADB_EXEC_TIMEOUT, int(value.total_seconds() * 1000) if isinstance(value, timedelta) else value)
+        pass

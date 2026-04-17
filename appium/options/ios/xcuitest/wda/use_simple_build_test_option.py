@@ -28,7 +28,7 @@ class UseSimpleBuildTestOption(SupportsCapabilities):
         """
         Whether to enforce app termination on session quit.
         """
-        return self.get_capability(USE_SIMPLE_BUILD_TEST)
+        pass
 
     @use_simple_build_test.setter
     def use_simple_build_test(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class UseSimpleBuildTestOption(SupportsCapabilities):
         this is true, or build with 'build-for-testing' and run tests with
         'test-without-building' for over Xcode 8 if this is false. Defaults to false.
         """
-        self.set_capability(USE_SIMPLE_BUILD_TEST, value)
+        pass

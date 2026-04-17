@@ -31,12 +31,7 @@ class DeviceTime(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPres
         Return:
             str: The date and time
         """
-        ext_name = 'mobile: getDeviceTime'
-        try:
-            return self.assert_extension_exists(ext_name).execute_script(ext_name)
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            return self.mark_extension_absence(ext_name).execute(Command.GET_DEVICE_TIME_GET, {})['value']
+        pass
 
     def get_device_time(self, format: Optional[str] = None) -> str:
         """Returns the date and time from the device.
@@ -54,22 +49,5 @@ class DeviceTime(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPres
         Return:
             str: The date and time
         """
-        ext_name = 'mobile: getDeviceTime'
-        if format is None:
-            return self.device_time
-        try:
-            return self.assert_extension_exists(ext_name).execute_script(ext_name, {'format': format})
-        except UnknownMethodException:
-            return self.mark_extension_absence(ext_name).execute(Command.GET_DEVICE_TIME_POST, {'format': format})['value']
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(
-            Command.GET_DEVICE_TIME_GET,
-            'GET',
-            '/session/$sessionId/appium/device/system_time',
-        )
-        self.command_executor.add_command(
-            Command.GET_DEVICE_TIME_POST,
-            'POST',
-            '/session/$sessionId/appium/device/system_time',
-        )

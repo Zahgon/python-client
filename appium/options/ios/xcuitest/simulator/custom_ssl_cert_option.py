@@ -28,7 +28,7 @@ class CustomSslCertOption(SupportsCapabilities):
         """
         SSL certificate content.
         """
-        return self.get_capability(CUSTOM_SSL_CERT)
+        pass
 
     @custom_ssl_cert.setter
     def custom_ssl_cert(self, value: str) -> None:
@@ -36,4 +36,4 @@ class CustomSslCertOption(SupportsCapabilities):
         Adds a root SSL certificate to IOS Simulator.
         The certificate content must be provided in PEM format.
         """
-        self.set_capability(CUSTOM_SSL_CERT, value)
+        pass

@@ -28,7 +28,7 @@ class ChromeLoggingPrefsOption(SupportsCapabilities):
         """
         Chrome logging preferences.
         """
-        return self.get_capability(CHROME_LOGGING_PREFS)
+        pass
 
     @chrome_logging_prefs.setter
     def chrome_logging_prefs(self, value: Dict[str, Any]) -> None:
@@ -38,4 +38,4 @@ class ChromeLoggingPrefsOption(SupportsCapabilities):
         getting-console-log-output-from-chrome-with-selenium-python-api-bindings).
         It is set to {"browser": "ALL"} by default.
         """
-        self.set_capability(CHROME_LOGGING_PREFS, value)
+        pass

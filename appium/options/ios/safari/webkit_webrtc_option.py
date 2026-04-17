@@ -28,7 +28,7 @@ class WebkitWebrtcOption(SupportsCapabilities):
         """
         WebRTC policies.
         """
-        return self.get_capability(WEBKIT_WEBRTC)
+        pass
 
     @webkit_webrtc.setter
     def webkit_webrtc(self, value: Dict[str, Any]) -> None:
@@ -49,4 +49,4 @@ class WebkitWebrtcOption(SupportsCapabilities):
         filtering so that both internal and external network addresses are
         always sent as ICE candidates.
         """
-        self.set_capability(WEBKIT_WEBRTC, value)
+        pass

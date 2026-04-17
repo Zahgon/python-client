@@ -28,11 +28,11 @@ class FullResetOption(SupportsCapabilities):
         """
         Whether the driver should perform a full reset.
         """
-        return self.get_capability(FULL_RESET)
+        pass
 
     @full_reset.setter
     def full_reset(self, value: bool) -> None:
         """
         Set whether the driver should perform a full reset.
         """
-        self.set_capability(FULL_RESET, value)
+        pass

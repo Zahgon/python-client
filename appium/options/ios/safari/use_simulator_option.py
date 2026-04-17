@@ -28,7 +28,7 @@ class UseSimulatorOption(SupportsCapabilities):
         """
         Whether to use iOS Simulator.
         """
-        return self.get_capability(USE_SIMULATOR)
+        pass
 
     @use_simulator.setter
     def use_simulator(self, value: bool) -> None:
@@ -38,4 +38,4 @@ class UseSimulatorOption(SupportsCapabilities):
         will not use iOS Simulator hosts. NOTE: An Xcode installation is required
         in order to run WebDriver tests on iOS Simulator hosts.
         """
-        self.set_capability(USE_SIMULATOR, value)
+        pass

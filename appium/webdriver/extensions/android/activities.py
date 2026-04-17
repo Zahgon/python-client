@@ -29,12 +29,7 @@ class Activities(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPres
         Returns:
             str: The current activity name running on the device
         """
-        ext_name = 'mobile: getCurrentActivity'
-        try:
-            return self.assert_extension_exists(ext_name).execute_script(ext_name)
-        except UnknownMethodException:
-            # TODO: Remove the fallback
-            return self.mark_extension_absence(ext_name).execute(Command.GET_CURRENT_ACTIVITY)['value']
+        pass
 
     def wait_activity(self, activity: str, timeout: int, interval: int = 1) -> bool:
         """Wait for an activity: block until target activity presents or time out.
@@ -49,17 +44,5 @@ class Activities(CanExecuteCommands, CanExecuteScripts, CanRememberExtensionPres
         Returns:
             `True` if the target activity is shown
         """
-        try:
-            WebDriverWait(self, timeout, interval).until(  # type: ignore[type-var]
-                lambda d: d.current_activity == activity
-            )
-            return True
-        except TimeoutException:
-            return False
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(
-            Command.GET_CURRENT_ACTIVITY,
-            'GET',
-            '/session/$sessionId/appium/device/current_activity',
-        )

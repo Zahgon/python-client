@@ -28,7 +28,7 @@ class ShouldUseSingletonTestManagerOption(SupportsCapabilities):
         """
         Whether to use the default proxy for test management within WebDriverAgent.
         """
-        return self.get_capability(SHOULD_USE_SINGLETON_TEST_MANAGER)
+        pass
 
     @should_use_singleton_test_manager.setter
     def should_use_singleton_test_manager(self, value: bool) -> None:
@@ -36,4 +36,4 @@ class ShouldUseSingletonTestManagerOption(SupportsCapabilities):
         Use default proxy for test management within WebDriverAgent. Setting this to false
         sometimes helps with socket hangup problems. Defaults to true.
         """
-        self.set_capability(SHOULD_USE_SINGLETON_TEST_MANAGER, value)
+        pass

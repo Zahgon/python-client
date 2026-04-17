@@ -28,7 +28,7 @@ class LogcatFormatOption(SupportsCapabilities):
         """
         Log print format.
         """
-        return self.get_capability(LOGCAT_FORMAT)
+        pass
 
     @logcat_format.setter
     def logcat_format(self, value: str) -> None:
@@ -36,4 +36,4 @@ class LogcatFormatOption(SupportsCapabilities):
         The log print format, where format is one of: brief process tag thread raw time
         threadtime long. threadtime is the default value.
         """
-        self.set_capability(LOGCAT_FORMAT, value)
+        pass

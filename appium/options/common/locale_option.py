@@ -28,11 +28,11 @@ class LocaleOption(SupportsCapabilities):
         """
         Locale abbreviation to use in a test session.
         """
-        return self.get_capability(LOCALE)
+        pass
 
     @locale.setter
     def locale(self, value: str) -> None:
         """
         Set locale abbreviation to use in a test session.
         """
-        self.set_capability(LOCALE, value)
+        pass

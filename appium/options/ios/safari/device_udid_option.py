@@ -28,7 +28,7 @@ class DeviceUdidOption(SupportsCapabilities):
         """
         String representing the UDID of the device.
         """
-        return self.get_capability(DEVICE_UDID)
+        pass
 
     @device_udid.setter
     def device_udid(self, value: str) -> None:
@@ -40,4 +40,4 @@ class DeviceUdidOption(SupportsCapabilities):
         Devices and Simulators window (accessed in Xcode via
         "Window -&gt; Devices and Simulators").
         """
-        self.set_capability(DEVICE_UDID, value)
+        pass

@@ -28,7 +28,7 @@ class WebDriverAgentUrlOption(SupportsCapabilities):
         """
         WedDriverAgent URL.
         """
-        return self.get_capability(WEB_DRIVER_AGENT_URL)
+        pass
 
     @web_driver_agent_url.setter
     def web_driver_agent_url(self, value: str) -> None:
@@ -36,4 +36,4 @@ class WebDriverAgentUrlOption(SupportsCapabilities):
         If provided, Appium will connect to an existing WebDriverAgent
         instance at this URL instead of starting a new one.
         """
-        self.set_capability(WEB_DRIVER_AGENT_URL, value)
+        pass

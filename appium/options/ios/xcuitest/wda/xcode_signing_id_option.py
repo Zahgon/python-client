@@ -28,7 +28,7 @@ class XcodeSigningIdOption(SupportsCapabilities):
         """
         Signing certificate for WebDriverAgent compilation.
         """
-        return self.get_capability(XCODE_SIGNING_ID)
+        pass
 
     @xcode_signing_id.setter
     def xcode_signing_id(self, value: str) -> None:
@@ -36,4 +36,4 @@ class XcodeSigningIdOption(SupportsCapabilities):
         Provides a signing certificate for WebDriverAgent compilation.
         If signing id is not provided then it defaults to "iPhone Developer"
         """
-        self.set_capability(XCODE_SIGNING_ID, value)
+        pass

@@ -28,7 +28,7 @@ class AppTopLevelWindowOption(SupportsCapabilities):
         """
         Hexadecimal handle of an existing application top level window to attach to.
         """
-        return self.get_capability(APP_TOP_LEVEL_WINDOW)
+        pass
 
     @app_top_level_window.setter
     def app_top_level_window(self, value: str) -> None:
@@ -37,4 +37,4 @@ class AppTopLevelWindowOption(SupportsCapabilities):
         window to attach to, for example 0x12345 (should be of string type).
         Either this capability or app one must be provided on session startup.
         """
-        self.set_capability(APP_TOP_LEVEL_WINDOW, value)
+        pass

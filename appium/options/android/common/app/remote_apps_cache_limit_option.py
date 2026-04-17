@@ -28,7 +28,7 @@ class RemoteAppsCacheLimitOption(SupportsCapabilities):
         """
         Maximum amount of apps that could be cached on the remote device.
         """
-        return self.get_capability(REMOTE_APPS_CACHE_LIMIT)
+        pass
 
     @remote_apps_cache_limit.setter
     def remote_apps_cache_limit(self, value: int) -> None:
@@ -39,4 +39,4 @@ class RemoteAppsCacheLimitOption(SupportsCapabilities):
         which takes some time. Setting this capability to zero disables apps caching.
         10 by default.
         """
-        self.set_capability(REMOTE_APPS_CACHE_LIMIT, value)
+        pass

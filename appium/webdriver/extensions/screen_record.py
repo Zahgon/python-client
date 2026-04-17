@@ -156,10 +156,7 @@ class ScreenRecord(CanExecuteCommands):
                 if `stop_recording_screen` isn't called after previous `start_recording_screen`.
                 Otherwise returns an empty string.
         """
-        if 'password' in options:
-            options['pass'] = options['password']
-            del options['password']
-        return self.execute(Command.START_RECORDING_SCREEN, {'options': options})['value']
+        pass
 
     def stop_recording_screen(self, **options: Any) -> bytes:
         """Gather the output from the previously started screen recording to a media file.
@@ -189,19 +186,5 @@ class ScreenRecord(CanExecuteCommands):
                 if the file has been successfully uploaded to a remote location
                 (depends on the actual `remotePath` value).
         """
-        if 'password' in options:
-            options['pass'] = options['password']
-            del options['password']
-        return self.execute(Command.STOP_RECORDING_SCREEN, {'options': options})['value']
+        pass
 
-    def _add_commands(self) -> None:
-        self.command_executor.add_command(
-            Command.START_RECORDING_SCREEN,
-            'POST',
-            '/session/$sessionId/appium/start_recording_screen',
-        )
-        self.command_executor.add_command(
-            Command.STOP_RECORDING_SCREEN,
-            'POST',
-            '/session/$sessionId/appium/stop_recording_screen',
-        )

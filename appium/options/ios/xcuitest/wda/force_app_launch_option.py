@@ -28,7 +28,7 @@ class ForceAppLaunchOption(SupportsCapabilities):
         """
         Whether to enforce app restart on session startup.
         """
-        return self.get_capability(FORCE_APP_LAUNCH)
+        pass
 
     @force_app_launch.setter
     def force_app_launch(self, value: bool) -> None:
@@ -39,4 +39,4 @@ class ForceAppLaunchOption(SupportsCapabilities):
         explicitly, by setting bundleId, or implicitly, by providing app).
         Default is true unless noReset capability is set to true.
         """
-        self.set_capability(FORCE_APP_LAUNCH, value)
+        pass

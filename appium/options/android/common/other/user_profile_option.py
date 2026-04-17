@@ -28,7 +28,7 @@ class UserProfileOption(SupportsCapabilities):
         """
         Integer identifier of a user profile.
         """
-        return self.get_capability(USER_PROFILE)
+        pass
 
     @user_profile.setter
     def user_profile(self, value: int) -> None:
@@ -39,4 +39,4 @@ class UserProfileOption(SupportsCapabilities):
         which is different from the current one, this capability might
         come in handy.
         """
-        self.set_capability(USER_PROFILE, value)
+        pass

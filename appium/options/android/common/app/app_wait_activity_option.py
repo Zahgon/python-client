@@ -28,7 +28,7 @@ class AppWaitActivityOption(SupportsCapabilities):
         """
         Name of the app activity to wait for.
         """
-        return self.get_capability(APP_WAIT_ACTIVITY)
+        pass
 
     @app_wait_activity.setter
     def app_wait_activity(self, value: str) -> None:
@@ -37,4 +37,4 @@ class AppWaitActivityOption(SupportsCapabilities):
         (not necessarily the main one).
         If not provided then defaults to appium:appActivity.
         """
-        self.set_capability(APP_WAIT_ACTIVITY, value)
+        pass

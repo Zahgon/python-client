@@ -28,7 +28,7 @@ class SkipUnlockOption(SupportsCapabilities):
         """
         Whether to skip the check for lock screen presence.
         """
-        return self.get_capability(SKIP_UNLOCK)
+        pass
 
     @skip_unlock.setter
     def skip_unlock(self, value: bool) -> None:
@@ -39,4 +39,4 @@ class SkipUnlockOption(SupportsCapabilities):
         Note, that this operation takes some time, so it is highly recommended to set
         this capability to true and disable screen locking on devices under test.
         """
-        self.set_capability(SKIP_UNLOCK, value)
+        pass

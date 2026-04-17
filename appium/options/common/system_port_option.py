@@ -28,11 +28,11 @@ class SystemPortOption(SupportsCapabilities):
         """
         The number of the port for the internal server to listen on.
         """
-        return self.get_capability(SYSTEM_PORT)
+        pass
 
     @system_port.setter
     def system_port(self, value: int) -> None:
         """
         Set the number of the port for the internal server to listen on.
         """
-        self.set_capability(SYSTEM_PORT, value)
+        pass

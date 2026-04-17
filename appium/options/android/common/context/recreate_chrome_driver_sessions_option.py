@@ -29,7 +29,7 @@ class RecreateChromeDriverSessionsOption(SupportsCapabilities):
         Whether chromedriver sessions should be killed and then recreated instead
         of just suspending it on context switch.
         """
-        return self.get_capability(RECREATE_CHROME_DRIVER_SESSIONS)
+        pass
 
     @recreate_chrome_driver_sessions.setter
     def recreate_chrome_driver_sessions(self, value: bool) -> None:
@@ -38,4 +38,4 @@ class RecreateChromeDriverSessionsOption(SupportsCapabilities):
         to be killed and then recreated instead of just suspending it on context
         switching. false by default.
         """
-        self.set_capability(RECREATE_CHROME_DRIVER_SESSIONS, value)
+        pass

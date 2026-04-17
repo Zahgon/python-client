@@ -28,7 +28,7 @@ class IncludeDeviceCapsToSessionInfoOption(SupportsCapabilities):
         """
         Whether to include screen information as the result of Get Session Capabilities.
         """
-        return self.get_capability(INCLUDE_DEVICE_CAPS_TO_SESSION_INFO)
+        pass
 
     @include_device_caps_to_session_info.setter
     def include_device_caps_to_session_info(self, value: bool) -> None:
@@ -38,4 +38,4 @@ class IncludeDeviceCapsToSessionInfoOption(SupportsCapabilities):
         it causes an extra API call to WDA which may increase the response time.
         Defaults to true.
         """
-        self.set_capability(INCLUDE_DEVICE_CAPS_TO_SESSION_INFO, value)
+        pass

@@ -28,7 +28,7 @@ class AutomaticProfilingOption(SupportsCapabilities):
         """
         Whether to use automatic profiling.
         """
-        return self.get_capability(AUTOMATIC_PROFILING)
+        pass
 
     @automatic_profiling.setter
     def automatic_profiling(self, value: bool) -> None:
@@ -38,4 +38,4 @@ class AutomaticProfilingOption(SupportsCapabilities):
         window. To view the recording, open the Web Inspector through Safari's
         Develop menu.
         """
-        self.set_capability(AUTOMATIC_PROFILING, value)
+        pass

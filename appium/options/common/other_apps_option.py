@@ -28,7 +28,7 @@ class OtherAppsOption(SupportsCapabilities):
         """
         Locations of apps to install before running a test.
         """
-        return self.get_capability(OTHER_APPS)
+        pass
 
     @other_apps.setter
     def other_apps(self, value: str) -> None:
@@ -36,4 +36,4 @@ class OtherAppsOption(SupportsCapabilities):
         Set locations of apps to install before running a test.
         Each item could be separated with a single comma.
         """
-        self.set_capability(OTHER_APPS, value)
+        pass

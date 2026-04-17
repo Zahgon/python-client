@@ -28,7 +28,7 @@ class WebDriverAgentMacUrlOption(SupportsCapabilities):
         """
         The URL Appium will connect to an existing WebDriverAgentMac instance.
         """
-        return self.get_capability(WEB_DRIVER_ARGENT_MAC_URL)
+        pass
 
     @web_driver_agent_mac_url.setter
     def web_driver_agent_mac_url(self, value: str) -> None:
@@ -36,4 +36,4 @@ class WebDriverAgentMacUrlOption(SupportsCapabilities):
         Set the URL Appium will connect to an existing WebDriverAgentMac
         instance at this URL instead of starting a new one.
         """
-        self.set_capability(WEB_DRIVER_ARGENT_MAC_URL, value)
+        pass

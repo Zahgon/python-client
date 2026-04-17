@@ -29,7 +29,7 @@ class AbsoluteWebLocationsOption(SupportsCapabilities):
         Whether Get Element Location returns coordinates
         relative to the page origin for web view elements.
         """
-        return self.get_capability(ABSOLUTE_WEB_LOCATIONS)
+        pass
 
     @absolute_web_locations.setter
     def absolute_web_locations(self, value: bool) -> None:
@@ -39,4 +39,4 @@ class AbsoluteWebLocationsOption(SupportsCapabilities):
         the page, rather than relative to the current scroll offset. This capability
         has no effect outside of webviews. Defaults to  false.
         """
-        self.set_capability(ABSOLUTE_WEB_LOCATIONS, value)
+        pass

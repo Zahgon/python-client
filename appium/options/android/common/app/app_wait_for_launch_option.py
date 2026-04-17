@@ -29,7 +29,7 @@ class AppWaitForLaunchOption(SupportsCapabilities):
         Whether to block until the app under test returns the control to the
         caller after its activity has been started by Activity Manager.
         """
-        return self.get_capability(APP_WAIT_FOR_LAUNCH)
+        pass
 
     @app_wait_for_launch.setter
     def app_wait_for_launch(self, value: bool) -> None:
@@ -38,4 +38,4 @@ class AppWaitForLaunchOption(SupportsCapabilities):
         caller after its activity has been started by Activity Manager
         (true, the default value) or to continue the test without waiting for that (false).
         """
-        self.set_capability(APP_WAIT_FOR_LAUNCH, value)
+        pass

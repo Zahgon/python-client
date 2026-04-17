@@ -29,7 +29,7 @@ class WebviewConnectRetriesOption(SupportsCapabilities):
         Number of retries to send connection message to remote debugger,
         to get a webview.
         """
-        return self.get_capability(WEBVIEW_CONNECT_RETRIES)
+        pass
 
     @webview_connect_retries.setter
     def webview_connect_retries(self, value: int) -> None:
@@ -37,4 +37,4 @@ class WebviewConnectRetriesOption(SupportsCapabilities):
         Number of times to send connection message to remote debugger,
         to get a webview. Default: 8.
         """
-        self.set_capability(WEBVIEW_CONNECT_RETRIES, value)
+        pass

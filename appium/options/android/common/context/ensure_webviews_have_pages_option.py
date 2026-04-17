@@ -28,7 +28,7 @@ class EnsureWebviewsHavePagesOption(SupportsCapabilities):
         """
         Whether to ensure if web views have pages.
         """
-        return self.get_capability(ENSURE_WEBVIEWS_HAVE_PAGES)
+        pass
 
     @ensure_webviews_have_pages.setter
     def ensure_webviews_have_pages(self, value: bool) -> None:
@@ -37,4 +37,4 @@ class EnsureWebviewsHavePagesOption(SupportsCapabilities):
         output. The driver uses devtools connection to retrieve the information about
         existing pages. true by default since Appium 1.19.0, false if lower than 1.19.0.
         """
-        self.set_capability(ENSURE_WEBVIEWS_HAVE_PAGES, value)
+        pass
